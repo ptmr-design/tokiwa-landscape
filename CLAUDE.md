@@ -8,7 +8,7 @@ Figmaデザインを元にした工務店向け企業サイト実装。
 複数ページ構成の静的サイト。
 フレームワークなしのVanilla HTML/CSS/JSで実装する。
 
-Figmaファイル: `eMV6n20EDNtmmKaEfUOsOk`(05中級Ex-青牡丹工務店_new)
+Figmaファイル: `eMV6n20EDNtmmKaEfUOsOk`(05中級Ex-青牡丹工務店\_new)
 Figma内の「仕様」フレーム(node 23:5)が実装要件書。実装判断に迷ったら必ず参照する。
 Figma上にコメントは残さない(全員にメール通知が飛ぶ)。
 
