@@ -20,13 +20,127 @@
     <script src="../js/main.js" defer></script>
   </head>
   <body>
-    <!-- l-sidebar(PC固定サイドバー / SPヘッダー): 共通パーツ実装ステップで追加 -->
+    <header class="l-sidebar">
+      <p class="l-sidebar__logo">
+        <a href="../">
+          <img src="../assets/svg/logo.svg" alt="青牡丹工務店" width="200" height="121" />
+        </a>
+      </p>
+      <button
+        class="l-sidebar__menu-button js-toggle-menu u-sp-only"
+        type="button"
+        aria-expanded="false"
+        aria-controls="global-nav"
+        aria-label="メニューを開閉する"
+      >
+        <span class="l-sidebar__menu-icon"></span>
+      </button>
+      <nav class="c-global-nav js-global-nav" id="global-nav" aria-label="サイト内ナビゲーション">
+        <ul class="c-global-nav__list">
+          <li class="c-global-nav__group u-sp-only">
+            <a class="c-global-nav__parent" href="../">トップページ</a>
+          </li>
+          <li class="c-global-nav__group c-global-nav__group--has-sub">
+            <a class="c-global-nav__parent" href="../about/">私達について</a>
+            <ul class="c-global-nav__sub">
+              <li><a class="c-global-nav__link" href="../about/#philosophy">経営理念</a></li>
+              <li><a class="c-global-nav__link" href="../about/#company">会社概要</a></li>
+              <li><a class="c-global-nav__link" href="../about/#safety">安全への取り組み</a></li>
+            </ul>
+          </li>
+          <li class="c-global-nav__group c-global-nav__group--has-sub">
+            <a class="c-global-nav__parent" href="../service/">事業内容</a>
+            <ul class="c-global-nav__sub">
+              <li><a class="c-global-nav__link" href="../service/#housing">住宅建築・リフォーム</a></li>
+              <li><a class="c-global-nav__link" href="../service/#corporate">法人新築・リフォーム</a></li>
+              <li><a class="c-global-nav__link" href="../service/#public">公共工事</a></li>
+            </ul>
+          </li>
+          <li class="c-global-nav__group">
+            <a class="c-global-nav__parent" href="../#news">お知らせ</a>
+          </li>
+          <li class="c-global-nav__group">
+            <a class="c-global-nav__parent" href="../contact/">
+              <img src="../assets/svg/icon-mail.svg" alt="" width="24" height="24" />
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <p class="c-global-nav__copyright">© AOBOTAN INC.</p>
+      </nav>
+    </header>
 
     <main class="l-main">
-      <!-- c-page-header(h1: 事業内容)+ アンカーボタン: 下層ページ実装ステップで追加 -->
-      <!-- 住宅建築・リフォーム / 法人新築・リフォーム / 公共工事(各: 大判写真+説明+施工事例カード×2)/ CONTACTバナー -->
+      <!-- c-page-header(h1: 事業内容)+ アンカーボタン / 住宅建築・リフォーム / 法人新築・リフォーム / 公共工事: 下層ページ実装ステップで追加 -->
+
+
+      <div class="l-container">
+        <section class="c-contact-banner">
+          <h2 class="c-section-heading">
+            <span class="c-section-heading__label">お問い合わせ</span>
+            <span class="c-section-heading__en" aria-hidden="true">CONTACT</span>
+          </h2>
+          <div class="c-contact-banner__body">
+            <div class="c-tel">
+              <div class="c-tel__item">
+                <span class="c-tel__label">Tel</span>
+                <span class="c-tel__note">お電話</span>
+              </div>
+              <div class="c-tel__item">
+                <a class="c-tel__number" href="tel:0000000000">0000-000-0000</a>
+                <span class="c-tel__note">営業時間10:00-20:00</span>
+              </div>
+            </div>
+            <a class="c-button c-button--mail" href="../contact/">
+              <img class="c-button__icon" src="../assets/svg/icon-mail.svg" alt="" width="20" height="20" />
+              メールフォームはこちら
+            </a>
+          </div>
+          <img
+            class="c-contact-banner__illust"
+            src="../assets/svg/illust-financing.svg"
+            alt=""
+            width="175"
+            height="256"
+          />
+        </section>
+      </div>
     </main>
 
-    <!-- l-footer: 共通パーツ実装ステップで追加 -->
+    <footer class="l-footer">
+      <div class="l-footer__inner l-container">
+        <p class="l-footer__logo">
+          <a href="../">
+            <img src="../assets/svg/logo.svg" alt="青牡丹工務店" width="222" height="133" />
+          </a>
+        </p>
+        <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+          <ul class="c-footer-nav">
+            <li><a class="c-footer-nav__link" href="../">トップページ</a></li>
+            <li><a class="c-footer-nav__link" href="../about/">私たちについて</a></li>
+            <li><a class="c-footer-nav__link" href="../about/#philosophy">経営理念</a></li>
+            <li><a class="c-footer-nav__link" href="../about/#company">会社概要</a></li>
+            <li><a class="c-footer-nav__link" href="../about/#safety">安全への取り組み</a></li>
+            <li><a class="c-footer-nav__link" href="../service/">事業内容</a></li>
+            <li><a class="c-footer-nav__link" href="../service/#housing">住宅建築・リフォーム</a></li>
+            <li><a class="c-footer-nav__link" href="../service/#corporate">法人新築・リフォーム</a></li>
+            <li><a class="c-footer-nav__link" href="../service/#public">公共工事</a></li>
+            <li><a class="c-footer-nav__link" href="../#news">お知らせ</a></li>
+            <li>
+              <a class="c-footer-nav__link" href="../contact/">
+                <img src="../assets/svg/icon-mail.svg" alt="" width="20" height="20" />
+                お問い合わせ
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="l-footer__info">
+          <p>〒000-0000　大阪府大阪市中央区北区南町5-6-7</p>
+          <p>営業時間　10:00~20:00</p>
+          <p>定休日　日曜日、祝日、年末年始（12月31日から1月3日まで）</p>
+        </address>
+        <p class="l-footer__copyright"><small>© AOBOTAN INC.</small></p>
+      </div>
+    </footer>
   </body>
 </html>

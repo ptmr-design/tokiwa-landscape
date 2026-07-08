@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Component: footer-nav (c-footer-nav)
+   フッターのサイトマップリンク
+   ========================================================================== */
+
+.c-footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.c-footer-nav__link {
+  display: inline-flex;
+  gap: var(--space-xs);
+  align-items: center;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  line-height: var(--lh-tight);
+  transition: color var(--transition-base);
+}
+
+.c-footer-nav__link:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .c-footer-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: var(--space-xl);
+    column-gap: var(--space-md);
+    justify-content: flex-end;
+    max-width: 36rem;
+  }
+}

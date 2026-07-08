@@ -1,5 +1,93 @@
 /* ==========================================================================
    Layout: sidebar (l-sidebar)
-   PC: 固定左サイドバー(280px、スクロール追従)
-   SP: 上部ヘッダーバー + ハンバーガー全画面ナビ
+   PC(1024px〜): 固定左サイドバー(280px、スクロール追従)
+   SP: 上部ヘッダーバー + ハンバーガーボタン(ナビ本体はc-global-nav)
    ========================================================================== */
+
+.l-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-sidebar);
+  width: 100%;
+  height: var(--height-header-sp);
+  background-color: var(--color-white);
+}
+
+.l-sidebar__logo {
+  position: absolute;
+  top: var(--space-xs);
+  left: 0;
+  width: 6.125rem; /* 98px */
+}
+
+/* SPハンバーガーボタン(CSS描画) */
+.l-sidebar__menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6875rem; /* 59px */
+  height: 3.6875rem;
+  background-color: var(--color-primary);
+}
+
+.l-sidebar__menu-icon {
+  position: relative;
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: background-color var(--transition-base);
+}
+
+.l-sidebar__menu-icon::before,
+.l-sidebar__menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: transform var(--transition-base);
+}
+
+.l-sidebar__menu-icon::before {
+  transform: translateY(-0.5rem);
+}
+
+.l-sidebar__menu-icon::after {
+  transform: translateY(0.5rem);
+}
+
+/* 開いている間はバツアイコンに変形 */
+.l-sidebar__menu-button[aria-expanded="true"] .l-sidebar__menu-icon {
+  background-color: transparent;
+}
+
+.l-sidebar__menu-button[aria-expanded="true"] .l-sidebar__menu-icon::before {
+  transform: rotate(45deg);
+}
+
+.l-sidebar__menu-button[aria-expanded="true"] .l-sidebar__menu-icon::after {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+  .l-sidebar {
+    width: var(--width-sidebar);
+    height: 100vh;
+    padding: 4.625rem 2.5rem 2.5rem; /* 74px 40px */
+  }
+
+  .l-sidebar__logo {
+    position: static;
+    width: 12.5rem; /* 200px */
+  }
+
+  .l-sidebar__menu-button {
+    display: none;
+  }
+}

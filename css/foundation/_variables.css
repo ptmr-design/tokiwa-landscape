@@ -12,6 +12,7 @@
   --color-text: #000;
   --color-white: #fff;
   --color-required: #e60012; /* フォーム必須バッジ */
+  --color-border: #ccc; /* 区切り線 */
   --color-overlay: rgba(0, 0, 0, 0.5); /* モーダル背景 */
 
   /* --- font family --- */
@@ -57,9 +58,10 @@
   --height-header-sp: 5rem; /* 80px SPヘッダー */
 
   /* --- radius --- */
-  --radius-sm: 0.375rem; /* 6px ボタン等 */
+  --radius-sm: 0.625rem; /* 10px ボタン等 */
   --radius-md: 0.75rem; /* 12px カード */
   --radius-lg: 1.25rem; /* 20px セクション大枠 */
+  --radius-xl: 3.125rem; /* 50px FVなど大型面 */
 
   /* --- misc --- */
   --transition-base: 0.3s ease;

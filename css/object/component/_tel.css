@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Component: tel (c-tel)
+   電話番号+営業時間の組(CONTACTバナー / お問い合わせページで再利用)
+   ========================================================================== */
+
+.c-tel {
+  display: flex;
+  align-items: stretch;
+}
+
+.c-tel__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: var(--space-md);
+}
+
+.c-tel__item:first-child {
+  padding-left: 0;
+}
+
+.c-tel__item + .c-tel__item {
+  border-left: 1px solid var(--color-text);
+}
+
+.c-tel__label,
+.c-tel__number {
+  font-family: var(--font-en);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-tight);
+}
+
+.c-tel__note {
+  font-size: var(--fs-2xs);
+  line-height: var(--lh-tight);
+}

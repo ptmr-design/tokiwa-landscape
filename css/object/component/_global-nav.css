@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Component: global-nav (c-global-nav)
+   SP: ハンバーガーから開く全画面オーバーレイナビ
+   PC(1024px〜): サイドバー内ナビ。親項目ホバーで子メニュー開閉(デフォルト閉+アイコン)
+   ========================================================================== */
+
+/* --- SP: 全画面オーバーレイ --- */
+.c-global-nav {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* l-sidebar(ヘッダーバー)より背面に敷く */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--height-header-sp) var(--space-md) var(--space-md);
+  background-color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.c-global-nav.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-global-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.c-global-nav__parent,
+.c-global-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  line-height: var(--lh-tight);
+}
+
+.c-global-nav__sub {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+.c-global-nav__copyright {
+  margin-top: var(--space-xl);
+  font-size: var(--fs-xs);
+  text-align: center;
+}
+
+/* --- PC: サイドバー内アコーディオン --- */
+@media (min-width: 1024px) {
+  .c-global-nav {
+    position: static;
+    z-index: auto;
+    display: block;
+    padding: 0;
+    margin-top: 3.5rem;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+  }
+
+  .c-global-nav__list {
+    display: block;
+    overflow-y: visible;
+  }
+
+  .c-global-nav__group {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .c-global-nav__parent {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 1.25rem 0;
+    font-size: var(--fs-lg);
+    transition: color var(--transition-base);
+  }
+
+  /* 開閉インジケーター(＋/−)。子メニューを持つグループのみ表示 */
+  .c-global-nav__group--has-sub > .c-global-nav__parent::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+
+  .c-global-nav__group--has-sub:hover > .c-global-nav__parent::after,
+  .c-global-nav__group--has-sub:focus-within > .c-global-nav__parent::after {
+    content: "−";
+  }
+
+  /* 子メニュー: デフォルト閉、ホバー/フォーカスで開く */
+  .c-global-nav__sub {
+    display: block;
+    max-height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height var(--transition-base), visibility var(--transition-base);
+  }
+
+  .c-global-nav__group--has-sub:hover .c-global-nav__sub,
+  .c-global-nav__group--has-sub:focus-within .c-global-nav__sub {
+    max-height: 12rem;
+    visibility: visible;
+  }
+
+  .c-global-nav__link {
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+    font-size: var(--fs-sm);
+    transition: color var(--transition-base);
+  }
+
+  .c-global-nav__sub > li:last-child .c-global-nav__link {
+    padding-bottom: 1.25rem;
+  }
+
+  .c-global-nav__parent:hover,
+  .c-global-nav__link:hover {
+    color: var(--color-primary);
+  }
+
+  .c-global-nav__copyright {
+    display: none;
+  }
+}

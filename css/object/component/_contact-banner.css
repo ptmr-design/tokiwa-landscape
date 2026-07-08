@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Component: contact-banner (c-contact-banner)
+   フッター直前の問い合わせ導線(全ページ共通)
+   ========================================================================== */
+
+.c-contact-banner {
+  position: relative;
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+  overflow: hidden;
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-lg);
+}
+
+.c-contact-banner__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: flex-start;
+  margin-top: var(--space-md);
+}
+
+.c-contact-banner__illust {
+  position: absolute;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  width: 3.75rem;
+}
+
+@media (min-width: 1024px) {
+  .c-contact-banner {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .c-contact-banner__body {
+    flex-direction: row;
+    gap: var(--space-lg);
+    align-items: center;
+    margin-top: var(--space-lg);
+  }
+
+  /* Tel区切りとボタンの間の縦線 */
+  .c-contact-banner__body .c-tel {
+    padding-right: var(--space-lg);
+    border-right: 1px solid var(--color-text);
+  }
+
+  .c-contact-banner__illust {
+    right: 2.5rem;
+    bottom: auto;
+    top: var(--space-2xl);
+    width: 10.9375rem; /* 175px */
+  }
+}
