@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Foundation: base
+   要素セレクタへの土台スタイル(クラスへの装飾はLayout/Object層で行う)
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
+  letter-spacing: var(--ls-base);
+  color: var(--color-text);
+  background-color: var(--color-white);
+}

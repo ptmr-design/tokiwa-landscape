@@ -1,0 +1,19 @@
+/* ==========================================================================
+   style.css
+   軽量FLOCSS: Foundation → Layout → Object(Component → Utility) の順で読み込む
+   Componentファイルは実装時に追加する
+   ========================================================================== */
+
+/* Foundation */
+@import url("foundation/_reset.css");
+@import url("foundation/_variables.css");
+@import url("foundation/_base.css");
+
+/* Layout */
+@import url("layout/_sidebar.css");
+@import url("layout/_footer.css");
+@import url("layout/_section.css");
+
+/* Object: Utility */
+@import url("object/utility/_spacing.css");
+@import url("object/utility/_text.css");
