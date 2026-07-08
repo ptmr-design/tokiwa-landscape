@@ -9,6 +9,7 @@
 
 .l-section {
   padding-top: var(--space-2xl);
+  scroll-margin-top: var(--height-header-sp); /* SP固定ヘッダー分のアンカーずれ防止 */
 }
 
 @media (min-width: 1024px) {

@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Component: service-detail (c-service-detail)
+   事業内容ページの各事業セクション(大判写真+見出し+2カラム説明+施工事例)
+   ========================================================================== */
+
+.c-service-detail__photo {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.c-service-detail__title {
+  margin-top: var(--space-lg);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+.c-service-detail__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.c-service-detail__lead {
+  font-weight: 700;
+}
+
+.c-service-detail__cases {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+@media (min-width: 1024px) {
+  .c-service-detail__photo {
+    width: 60rem; /* 960px */
+  }
+
+  .c-service-detail__grid {
+    flex-direction: row;
+    gap: var(--space-2xl);
+  }
+
+  .c-service-detail__lead,
+  .c-service-detail__text {
+    flex: 1;
+  }
+
+  .c-service-detail__cases {
+    grid-template-columns: repeat(2, 22rem); /* 352px */
+    column-gap: 3.875rem;
+    padding-left: 3.125rem; /* 事例カードを一段内側へ */
+  }
+}

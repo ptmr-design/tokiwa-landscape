@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Component: page-header (c-page-header)
+   下層ページ共通: ヒーロー画像 + h1 + リード + イラスト + アンカーボタン
+   ========================================================================== */
+
+.c-page-header {
+  position: relative;
+}
+
+/* 右上の青いアクセント(PCのみ) */
+.c-page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 18rem;
+  height: 32rem;
+  background-color: var(--color-primary);
+}
+
+.c-page-header__hero {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.c-page-header__title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+.c-page-header__lead {
+  margin-top: var(--space-md);
+}
+
+.c-page-header__anchors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 1024px) {
+  .c-page-header::before {
+    display: block;
+  }
+
+  .c-page-header__title {
+    font-size: var(--fs-2xl);
+  }
+}

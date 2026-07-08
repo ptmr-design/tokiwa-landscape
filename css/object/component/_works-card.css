@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Component: works-card (c-works-card)
+   施工事例カード(物件名+写真+施工年月/構造)
+   ========================================================================== */
+
+.c-works-card__title {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+.c-works-card__image {
+  width: 100%;
+  margin-top: var(--space-sm);
+  border-radius: var(--radius-md);
+}
+
+.c-works-card__caption {
+  margin-top: var(--space-xs);
+  font-size: var(--fs-sm);
+}

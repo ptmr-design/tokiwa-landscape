@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Component: info-table (c-info-table)
+   会社概要の定義テーブル
+   ========================================================================== */
+
+.c-info-table {
+  width: 100%;
+}
+
+.c-info-table th,
+.c-info-table td {
+  padding: var(--space-md) 0;
+  font-size: var(--fs-md);
+  line-height: var(--lh-tight);
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.c-info-table th {
+  width: 6.5rem;
+  padding-right: var(--space-md);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .c-info-table th {
+    width: 15.125rem; /* 242px */
+  }
+}

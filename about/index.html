@@ -71,10 +71,180 @@
     </header>
 
     <main class="l-main">
-      <!-- c-page-header(h1: 私達について)+ アンカーボタン / 経営理念 / 会社概要 / 安全への取り組み: 下層ページ実装ステップで追加 -->
+      <div class="c-page-header">
+        <div class="l-container">
+          <img
+            class="c-page-header__hero"
+            src="../assets/img/about-hero.jpg"
+            alt="観葉植物のある明るいオフィス"
+            width="2240"
+            height="1322"
+          />
+          <div class="c-heading-row u-mt-lg">
+            <div>
+              <h1 class="c-page-header__title">私達について</h1>
+              <p class="c-page-header__lead u-max-w-md">
+                「丁寧な家造りで、理想を現実に」<br />
+                これを実現するために、わたしたちが行っていることを一部ご紹介します。
+              </p>
+            </div>
+            <img
+              class="c-heading-row__illust"
+              src="../assets/svg/illust-hearing.svg"
+              alt=""
+              width="165"
+              height="198"
+            />
+          </div>
+          <ul class="c-page-header__anchors">
+            <li>
+              <a class="c-anchor-button" href="#philosophy">
+                経営理念
+                <img class="c-anchor-button__icon" src="../assets/svg/icon-arrow-down.svg" alt="" width="10" height="10" />
+              </a>
+            </li>
+            <li>
+              <a class="c-anchor-button" href="#company">
+                会社概要
+                <img class="c-anchor-button__icon" src="../assets/svg/icon-arrow-down.svg" alt="" width="10" height="10" />
+              </a>
+            </li>
+            <li>
+              <a class="c-anchor-button" href="#safety">
+                安全への取り組み
+                <img class="c-anchor-button__icon" src="../assets/svg/icon-arrow-down.svg" alt="" width="10" height="10" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
+      <section class="l-section" id="philosophy">
+        <div class="l-container">
+          <h2 class="c-section-heading">
+            <span class="c-section-heading__label">経営理念</span>
+          </h2>
+          <img
+            class="u-mt-lg"
+            src="../assets/img/vision.png"
+            alt="青牡丹工務店の経営理念を構成する6要素: 品質第一、顧客志向、創造性と革新、社会貢献、チームワーク、誠実と透明性"
+            width="1846"
+            height="1038"
+          />
+        </div>
+      </section>
 
-      <div class="l-container">
+      <section class="l-section" id="company">
+        <div class="l-container">
+          <h2 class="c-section-heading">
+            <span class="c-section-heading__label">会社概要</span>
+          </h2>
+          <div class="c-media-text u-mt-lg">
+            <div class="c-media-text__body">
+              <p>
+                青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。
+              </p>
+              <p>
+                創業以来、私たちの経営理念は変わることなく、品質第一と顧客満足を常に追求することを掲げています。私たちは、建物を単なる建築物としてではなく、人々の生活や夢の実現の場として捉え、お客様の要望に応えるために最善の努力を惜しまず取り組んできました。
+              </p>
+              <p>
+                その結果、地域社会だけでなく、広く多くのお客様からの信頼を得て、業績を着実に拡大させてまいりました。途中で直面した困難や挑戦もありましたが、常に創造性と革新を重視し、チーム全体で協力し合いながら、克服してまいりました。
+              </p>
+              <p>
+                私たちの理念は、常に社会に貢献し、持続可能な未来を築くことにあります。地域社会や環境への配慮を大切にし、誠実な姿勢で仕事に取り組むことで、より良い社会を築いていくことを目指しています。
+              </p>
+              <p>
+                今後も、お客様の声に耳を傾けながら、さらなる成長と発展を目指し、青牡丹工務店は邁進してまいります。
+              </p>
+            </div>
+            <figure class="c-media-text__media c-media-text__media--lg">
+              <img src="../assets/img/ceo.jpg" alt="作業着姿で腕を組む代表取締役" width="662" height="850" />
+              <figcaption class="c-media-text__caption">
+                代表取締役
+                <span class="c-media-text__caption-name">谷垣周平</span>
+              </figcaption>
+            </figure>
+          </div>
+          <table class="c-info-table u-mt-2xl">
+            <tbody>
+              <tr>
+                <th>商号</th>
+                <td>株式会社　青牡丹工務店</td>
+              </tr>
+              <tr>
+                <th>創業</th>
+                <td>昭和40年5月3日</td>
+              </tr>
+              <tr>
+                <th>資本金</th>
+                <td>2000万円</td>
+              </tr>
+              <tr>
+                <th>従業員数</th>
+                <td>24人</td>
+              </tr>
+              <tr>
+                <th>営業種目</th>
+                <td>総合建設設計施工・不動産業・倉庫業・リフォーム工事</td>
+              </tr>
+              <tr>
+                <th>本社所在地</th>
+                <td>〒000-0000　大阪府大阪市中央区北区南町5-6-7</td>
+              </tr>
+              <tr>
+                <th>代表取締役</th>
+                <td>谷垣周平</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="l-section" id="safety">
+        <div class="l-container">
+          <h2 class="c-section-heading">
+            <span class="c-section-heading__label">安全への取り組み</span>
+          </h2>
+          <div class="c-media-text u-mt-xl">
+            <div class="c-media-text__body">
+              <h3 class="c-media-text__title">経営層による安全衛生巡視</h3>
+              <p>
+                経営層による安全衛生巡視は、当社の安全管理体制の中核を担う活動の一つです。この巡視では、経営者や上級管理職が定期的に現場を訪問し、安全な作業環境の確保や安全基準の遵守を徹底することが主な目的です。
+              </p>
+              <p>
+                具体的には、巡視の際には安全規則や法令の遵守状況を点検し、作業現場における危険な箇所や潜在的なリスクを特定します。また、機械や設備の安全装置が正しく機能しているかどうかも確認します。さらに、作業員に対して安全教育や指導を行い、安全意識の向上を図ります。
+              </p>
+            </div>
+            <img
+              class="c-media-text__media c-media-text__media--sm"
+              src="../assets/img/safety01.jpg"
+              alt="現場で安全確認を行う作業員たち"
+              width="534"
+              height="416"
+            />
+          </div>
+          <div class="c-media-text u-mt-2xl">
+            <div class="c-media-text__body">
+              <h3 class="c-media-text__title">労働災害防止への取り組み・教育体制</h3>
+              <p>
+                労働災害の防止に向けた従業員への教育・訓練も欠かせません。新入社員や新規作業員には、安全教育プログラムを実施し、作業時の安全ルールや手順、危険な状況の認識方法などを徹底的に指導しています。さらに、定期的な安全講習会や研修を通じて、従業員の安全意識を高める取り組みを行っています。
+              </p>
+              <p>
+                労働災害が発生した場合には、速やかに原因究明を行い、再発防止策を迅速に実施します。また、従業員からの安全に関する意見や提案を積極的に受け付け、改善に向けた取り組みを推進しています。
+              </p>
+            </div>
+            <img
+              class="c-media-text__media c-media-text__media--sm"
+              src="../assets/img/safety02.jpg"
+              alt="研修室で安全教育を受ける従業員"
+              width="534"
+              height="416"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="l-container u-mt-3xl">
         <section class="c-contact-banner">
           <h2 class="c-section-heading">
             <span class="c-section-heading__label">お問い合わせ</span>

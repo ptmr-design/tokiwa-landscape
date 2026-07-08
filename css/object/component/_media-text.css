@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Component: media-text (c-media-text)
+   テキスト+右側画像の組(会社概要の代表紹介 / 安全への取り組み)
+   ========================================================================== */
+
+.c-media-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.c-media-text__body {
+  flex: 1;
+}
+
+.c-media-text__title {
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+.c-media-text__media {
+  flex-shrink: 0;
+}
+
+.c-media-text__caption {
+  margin-top: var(--space-xs);
+  font-size: var(--fs-md);
+}
+
+.c-media-text__caption-name {
+  display: block;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .c-media-text {
+    flex-direction: row;
+    gap: var(--space-2xl);
+    align-items: flex-start;
+  }
+
+  /* 代表写真(331px) */
+  .c-media-text__media--lg {
+    width: 20.6875rem;
+  }
+
+  /* 取り組み写真(267px) */
+  .c-media-text__media--sm {
+    width: 16.6875rem;
+  }
+}

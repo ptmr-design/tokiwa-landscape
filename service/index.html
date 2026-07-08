@@ -71,10 +71,160 @@
     </header>
 
     <main class="l-main">
-      <!-- c-page-header(h1: 事業内容)+ アンカーボタン / 住宅建築・リフォーム / 法人新築・リフォーム / 公共工事: 下層ページ実装ステップで追加 -->
+      <div class="c-page-header">
+        <div class="l-container">
+          <img
+            class="c-page-header__hero"
+            src="../assets/img/service-hero.jpg"
+            alt="机の上に置かれた木製の家の模型と図面"
+            width="2240"
+            height="1342"
+          />
+          <div class="c-heading-row u-mt-lg">
+            <div>
+              <h1 class="c-page-header__title">事業内容</h1>
+              <p class="c-page-header__lead u-max-w-md">
+                青牡丹工務店は、「住宅建築・リフォーム」「法人新築・リフォーム」「公共工事」の3つを事業の柱としています。ここではそれぞれご紹介します。
+              </p>
+            </div>
+            <img
+              class="c-heading-row__illust"
+              src="../assets/svg/illust-paperless.svg"
+              alt=""
+              width="165"
+              height="203"
+            />
+          </div>
+          <ul class="c-page-header__anchors">
+            <li>
+              <a class="c-anchor-button" href="#housing">
+                住宅建築・リフォーム
+                <img class="c-anchor-button__icon" src="../assets/svg/icon-arrow-down.svg" alt="" width="10" height="10" />
+              </a>
+            </li>
+            <li>
+              <a class="c-anchor-button" href="#corporate">
+                法人新築・リフォーム
+                <img class="c-anchor-button__icon" src="../assets/svg/icon-arrow-down.svg" alt="" width="10" height="10" />
+              </a>
+            </li>
+            <li>
+              <a class="c-anchor-button" href="#public">
+                公共工事
+                <img class="c-anchor-button__icon" src="../assets/svg/icon-arrow-down.svg" alt="" width="10" height="10" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
+      <section class="l-section" id="housing">
+        <div class="l-container">
+          <article class="c-service-detail">
+            <img
+              class="c-service-detail__photo"
+              src="../assets/img/works01.jpg"
+              alt="ダイニングテーブルと観葉植物のある和モダンな住宅の内観"
+              width="1920"
+              height="800"
+            />
+            <h2 class="c-service-detail__title">住宅建築・リフォーム</h2>
+            <div class="c-service-detail__grid">
+              <p class="c-service-detail__lead">
+                当社の住宅建築・リフォーム事業では、お客様の夢や理想を具現化するためのサービスを提供しています。
+              </p>
+              <p class="c-service-detail__text">
+                新しい家を建てる際には、お客様のニーズや希望を理解し、オーダーメイドの住宅を設計・施工します。
+                また、古くなったり、機能性が低下したりした建物を、新しい価値ある空間へと再生するリフォームサービスを提供しています。お客様のライフスタイルやニーズに合わせて、効率的かつリーズナブルなリフォームプランをご提案し、品質に妥協することなく施工いたします。
+              </p>
+            </div>
+            <div class="c-service-detail__cases">
+              <div class="c-works-card">
+                <h3 class="c-works-card__title">芦屋（兵庫県）のコテージ付き住宅</h3>
+                <img class="c-works-card__image" src="../assets/img/jirei01.jpg" alt="芦屋のコテージ付き住宅の外観" width="704" height="548" />
+                <p class="c-works-card__caption">施工年月：R2年2月 構造：S造</p>
+              </div>
+              <div class="c-works-card">
+                <h3 class="c-works-card__title">鷹峯（京都府京都市）のモダン和風住宅</h3>
+                <img class="c-works-card__image" src="../assets/img/jirei02.jpg" alt="鷹峯のモダン和風住宅の外観" width="704" height="548" />
+                <p class="c-works-card__caption">施工年月：R4年4月 構造：木造</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <div class="l-container">
+      <section class="l-section" id="corporate">
+        <div class="l-container">
+          <article class="c-service-detail">
+            <img
+              class="c-service-detail__photo"
+              src="../assets/img/works02.jpg"
+              alt="青い外壁の物流倉庫の内部"
+              width="1920"
+              height="800"
+            />
+            <h2 class="c-service-detail__title">法人新築・リフォーム</h2>
+            <div class="c-service-detail__grid">
+              <p class="c-service-detail__lead">
+                当社の法人新築・リフォームサービスでは、商業施設やオフィスビル、工場など、法人向けの建物の新築や改修を手がけています。
+              </p>
+              <p class="c-service-detail__text">
+                既存の商業施設やオフィス、工場などの建物を改修し、最新のビジネスニーズに適した空間へと生まれ変わらせます。設備の更新やレイアウトの見直し、外装や内装のリニューアルなど、お客様の要望に応じたリフォームプランを提案し、スムーズな工事を実施します。
+              </p>
+            </div>
+            <div class="c-service-detail__cases">
+              <div class="c-works-card">
+                <h3 class="c-works-card__title">株式会社kaminari station</h3>
+                <img class="c-works-card__image" src="../assets/img/jirei03.jpg" alt="株式会社kaminari stationの社屋外観" width="704" height="548" />
+                <p class="c-works-card__caption">施工年月：H25年4月 構造：S造</p>
+              </div>
+              <div class="c-works-card">
+                <h3 class="c-works-card__title">鯉登陸運(株)</h3>
+                <img class="c-works-card__image" src="../assets/img/jirei04.jpg" alt="鯉登陸運の青い社屋外観" width="704" height="548" />
+                <p class="c-works-card__caption">施工年月：R4年3月 構造：S造</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="l-section" id="public">
+        <div class="l-container">
+          <article class="c-service-detail">
+            <img
+              class="c-service-detail__photo"
+              src="../assets/img/works03.jpg"
+              alt="庭園のある石造りの公共施設"
+              width="1920"
+              height="800"
+            />
+            <h2 class="c-service-detail__title">公共工事</h2>
+            <div class="c-service-detail__grid">
+              <p class="c-service-detail__lead">
+                公共工事事業は、道路や橋梁、公共施設などの建設・改修を行う事業です。
+              </p>
+              <p class="c-service-detail__text">
+                公共工事事業は、地域社会の発展や住民の生活に密接に関わる重要な事業です。政府や自治体からの発注が多く、厳しい品質基準や工期管理が求められます。当社では、経験豊富な専門家がチームを組み、最新の技術とノウハウを駆使して、安全で信頼性の高い公共施設の建設に貢献しています。
+              </p>
+            </div>
+            <div class="c-service-detail__cases">
+              <div class="c-works-card">
+                <h3 class="c-works-card__title">神戸市立真島小学校　内装工事</h3>
+                <img class="c-works-card__image" src="../assets/img/jirei05.jpg" alt="小学校の明るい教室の内装" width="704" height="548" />
+                <p class="c-works-card__caption">施工年月：R1年3月 構造：S造</p>
+              </div>
+              <div class="c-works-card">
+                <h3 class="c-works-card__title">枚方市立暮方郵便局</h3>
+                <img class="c-works-card__image" src="../assets/img/jirei06.jpg" alt="枚方市立暮方郵便局の外観" width="704" height="548" />
+                <p class="c-works-card__caption">施工年月：R4年4月 構造：木造</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="l-container u-mt-3xl">
         <section class="c-contact-banner">
           <h2 class="c-section-heading">
             <span class="c-section-heading__label">お問い合わせ</span>

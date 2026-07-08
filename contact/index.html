@@ -71,10 +71,166 @@
     </header>
 
     <main class="l-main">
-      <!-- c-page-header(h1: お問い合わせ)/ c-step / フォーム: 下層ページ実装ステップで追加 -->
+      <div class="c-page-header">
+        <div class="l-container">
+          <img
+            class="c-page-header__hero"
+            src="../assets/img/contact-hero.jpg"
+            alt="机に広げられた設計図と鉛筆"
+            width="2240"
+            height="1312"
+          />
+          <div class="c-heading-row u-mt-lg">
+            <div>
+              <h1 class="c-page-header__title">お問い合わせ</h1>
+              <p class="c-page-header__lead u-max-w-md">
+                青牡丹工務店のサービスにご興味を持って頂き、誠にありがとうございます。下記のフォームよりお問い合わせください。
+              </p>
+            </div>
+            <img
+              class="c-heading-row__illust"
+              src="../assets/svg/illust-contact.svg"
+              alt=""
+              width="165"
+              height="174"
+            />
+          </div>
+        </div>
+      </div>
 
+      <section class="l-section">
+        <div class="l-container">
+          <div class="c-contact-layout">
+            <div class="c-contact-layout__main">
+              <ol class="c-step">
+                <li class="c-step__item c-step__item--current">
+                  <span class="c-step__number">01</span>
+                  <span class="c-step__label">入力</span>
+                </li>
+                <li class="c-step__item">
+                  <span class="c-step__number">02</span>
+                  <span class="c-step__label">送信完了</span>
+                </li>
+              </ol>
 
-      <div class="l-container">
+              <form class="c-form js-form u-mt-xl" action="../thanks/" method="get">
+                <fieldset class="c-form__field">
+                  <legend class="c-form__label">
+                    お問い合わせの種類<span class="c-form__required">★必須</span>
+                  </legend>
+                  <div class="c-form__radios">
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="注文住宅の相談" checked required />
+                      注文住宅の相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="法人建築の相談" />
+                      法人建築の相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="リフォームの相談" />
+                      リフォームの相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="公共工事の相談" />
+                      公共工事の相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="その他" />
+                      その他
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="c-form__field">
+                  <p class="c-form__label">お名前<span class="c-form__required">★必須</span></p>
+                  <div class="c-form__name-row">
+                    <input
+                      class="c-form__input"
+                      type="text"
+                      name="family-name"
+                      placeholder="青牡丹"
+                      autocomplete="family-name"
+                      aria-label="姓"
+                      required
+                    />
+                    <input
+                      class="c-form__input"
+                      type="text"
+                      name="given-name"
+                      placeholder="幸太郎"
+                      autocomplete="given-name"
+                      aria-label="名"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="c-form__field">
+                  <label class="c-form__label" for="form-email">
+                    メールアドレス<span class="c-form__required">★必須</span>
+                  </label>
+                  <input
+                    class="c-form__input"
+                    id="form-email"
+                    type="email"
+                    name="email"
+                    placeholder="aobotan@gmail.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="c-form__field">
+                  <label class="c-form__label" for="form-tel">電話番号</label>
+                  <input
+                    class="c-form__input"
+                    id="form-tel"
+                    type="tel"
+                    name="tel"
+                    placeholder="000-0000-0000"
+                    autocomplete="tel"
+                  />
+                </div>
+
+                <div class="c-form__field">
+                  <label class="c-form__label" for="form-address">
+                    住所<span class="c-form__required">★必須</span>
+                  </label>
+                  <input
+                    class="c-form__input"
+                    id="form-address"
+                    type="text"
+                    name="address"
+                    placeholder="大阪府大阪市中央区北区南町5-6-7"
+                    autocomplete="street-address"
+                    required
+                  />
+                </div>
+
+                <label class="c-form__confirm">
+                  <input type="checkbox" name="confirm" required />
+                  入力内容に間違いないことを確認しました
+                </label>
+
+                <p class="c-form__submit">
+                  <button class="c-button c-button--primary js-form-submit" type="submit" disabled>
+                    送信する
+                  </button>
+                </p>
+              </form>
+            </div>
+
+            <div class="c-form-aside">
+              <p class="c-form-aside__title">お電話も受け付けています。</p>
+              <a class="c-form-aside__number" href="tel:0000000000">0000-000-0000</a>
+              <p class="c-form-aside__note">営業時間10:00-20:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="l-container u-mt-3xl">
         <section class="c-contact-banner">
           <h2 class="c-section-heading">
             <span class="c-section-heading__label">お問い合わせ</span>

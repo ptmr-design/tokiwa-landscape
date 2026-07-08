@@ -94,6 +94,32 @@ const initToggleMenu = () => {
   });
 };
 
+/**
+ * お問い合わせフォーム: 必須項目が全て入力されるまで送信ボタンを無効化(仕様書指定)
+ * 送信機能は持たないため、送信時は完了ページへ遷移する
+ */
+const initForm = () => {
+  const form = document.querySelector(".js-form");
+  if (!form) return;
+
+  const submit = form.querySelector(".js-form-submit");
+
+  const updateSubmitState = () => {
+    submit.disabled = !form.checkValidity();
+  };
+
+  form.addEventListener("input", updateSubmitState);
+  form.addEventListener("change", updateSubmitState);
+  updateSubmitState();
+
+  form.addEventListener("submit", (event) => {
+    // 入力値をクエリ文字列に載せずに完了ページへ遷移する
+    event.preventDefault();
+    window.location.href = form.getAttribute("action");
+  });
+};
+
 initLoading();
 initToggleMenu();
 initModal();
+initForm();
