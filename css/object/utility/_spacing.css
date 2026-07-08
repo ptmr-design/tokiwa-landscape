@@ -1,4 +1,32 @@
 /* ==========================================================================
    Utility: spacing (u-)
-   1クラス1役割。複数プロパティを持たせない
+   1クラス1役割。複数のCSSプロパティを持たせない
    ========================================================================== */
+
+.u-mt-sm {
+  margin-top: var(--space-sm);
+}
+
+.u-mt-md {
+  margin-top: var(--space-md);
+}
+
+.u-mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.u-mt-xl {
+  margin-top: var(--space-xl);
+}
+
+.u-mt-2xl {
+  margin-top: var(--space-2xl);
+}
+
+.u-mt-3xl {
+  margin-top: var(--space-3xl);
+}
+
+.u-max-w-md {
+  max-width: 26.875rem; /* 429px 本文向けの行長 */
+}

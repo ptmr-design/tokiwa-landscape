@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Component: heading-row (c-heading-row)
+   セクション見出しと添えイラストを横並びにする行
+   ========================================================================== */
+
+.c-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.c-heading-row__illust {
+  flex-shrink: 0;
+  width: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .c-heading-row__illust {
+    width: 10rem;
+  }
+}

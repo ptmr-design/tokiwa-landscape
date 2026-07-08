@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Component: fv (c-fv)
+   TOPファーストビュー。イラスト一括PNG + コピー(HTML)を重ねる。
+   コピー・見出しはTOPのみ、ふわっと出現アニメーション(仕様書指定)
+   ========================================================================== */
+
+.c-fv {
+  position: relative;
+}
+
+/* 右上の青い正方形(PCのみ) */
+.c-fv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 45.4375rem; /* 727px */
+  height: 45.4375rem;
+  background-color: var(--color-primary);
+}
+
+.c-fv__panel {
+  position: relative;
+}
+
+.c-fv__illust {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  animation: fv-fade-in 1s ease 0.2s both;
+}
+
+.c-fv__copy {
+  padding: var(--space-md) 0;
+  background-color: var(--color-white);
+}
+
+.c-fv__title {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  animation: fv-fade-up 0.8s ease 0.6s both;
+}
+
+.c-fv__lead {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  animation: fv-fade-up 0.8s ease 0.9s both;
+}
+
+.c-fv__scroll {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .c-fv {
+    padding: 2.5rem 2.5rem 0 0; /* 40px: グレーパネルの右上に青を覗かせる */
+  }
+
+  .c-fv::before {
+    display: block;
+  }
+
+  .c-fv__panel {
+    z-index: 1; /* 青い正方形より前面 */
+  }
+
+  .c-fv__illust {
+    border-radius: var(--radius-xl);
+  }
+
+  /* コピーはパネル右下に白面で重ねる */
+  .c-fv__copy {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 43.125rem; /* 690px */
+    padding: var(--space-lg) 0 var(--space-lg) var(--space-xl);
+    border-top-left-radius: var(--radius-xl);
+  }
+
+  .c-fv__title {
+    font-size: var(--fs-4xl);
+  }
+
+  .c-fv__lead {
+    margin-top: var(--space-md);
+    font-size: var(--fs-md);
+  }
+
+  .c-fv__scroll {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 1.125rem;
+    display: block;
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    color: var(--color-primary);
+    animation: fv-fade-up 0.8s ease 1.2s both;
+  }
+}
+
+@keyframes fv-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fv-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

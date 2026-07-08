@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Component: service-block (c-service-block)
+   番号(01〜03)+写真+見出し+テキスト+ボタンの事業ブロック
+   --reverse: 写真とテキストの左右反転(02)
+   ========================================================================== */
+
+.c-service-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.c-service-block + .c-service-block {
+  margin-top: var(--space-2xl);
+}
+
+.c-service-block__media {
+  position: relative;
+}
+
+.c-service-block__image {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+/* 写真に重なる淡色の大型番号 */
+.c-service-block__number {
+  position: absolute;
+  top: -0.5em;
+  right: -0.25rem;
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--color-primary-pale);
+}
+
+.c-service-block--reverse .c-service-block__number {
+  right: auto;
+  left: -0.25rem;
+}
+
+.c-service-block__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.c-service-block__title {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  background-color: var(--color-white);
+}
+
+.c-service-block__text {
+  font-size: var(--fs-md);
+}
+
+@media (min-width: 1024px) {
+  .c-service-block {
+    flex-direction: row;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
+
+  .c-service-block + .c-service-block {
+    margin-top: var(--space-3xl);
+  }
+
+  .c-service-block--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .c-service-block__media {
+    flex-shrink: 0;
+    width: 32.25rem; /* 516px */
+  }
+
+  .c-service-block__number {
+    top: 0;
+    right: -1.5em;
+    font-size: var(--fs-display-lg);
+  }
+
+  .c-service-block--reverse .c-service-block__number {
+    right: auto;
+    left: -1.5em;
+  }
+
+  .c-service-block__body {
+    padding-top: 11rem; /* 大型番号(168px)の下に見出しを配置 */
+  }
+
+  .c-service-block__title {
+    padding: var(--space-xs) 0;
+  }
+
+  .c-service-block__body .c-button {
+    align-self: flex-end;
+  }
+}

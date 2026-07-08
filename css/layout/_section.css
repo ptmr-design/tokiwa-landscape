@@ -7,6 +7,16 @@
   padding-top: var(--height-header-sp);
 }
 
+.l-section {
+  padding-top: var(--space-2xl);
+}
+
+@media (min-width: 1024px) {
+  .l-section {
+    padding-top: var(--space-4xl);
+  }
+}
+
 .l-container {
   width: min(100% - var(--space-md) * 2, var(--width-content));
   margin-inline: auto;

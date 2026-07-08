@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Component: news-item (c-news-list / c-news-item)
+   お知らせ一覧。クリックでモーダルを開く
+   ========================================================================== */
+
+.c-news-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.c-news-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.c-news-item__button {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "tag date arrow"
+    "title title arrow";
+  gap: var(--space-sm) var(--space-md);
+  align-items: center;
+  width: 100%;
+  padding: var(--space-md) 0;
+  text-align: left;
+  transition: opacity var(--transition-base);
+}
+
+.c-news-item__button:hover {
+  opacity: 0.6;
+}
+
+.c-news-item .c-tag {
+  grid-area: tag;
+}
+
+.c-news-item__date {
+  grid-area: date;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.c-news-item__title {
+  grid-area: title;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+.c-news-item__arrow {
+  grid-area: arrow;
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .c-news-item__button {
+    padding: var(--space-lg) var(--space-sm);
+  }
+}

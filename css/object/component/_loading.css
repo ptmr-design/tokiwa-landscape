@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Component: loading (c-loading)
+   初回アクセス時のみ表示するローディング画面(仕様書指定)。
+   再訪判定(html.is-visited)は head 内スクリプトで付与する
+   ========================================================================== */
+
+.c-loading {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  opacity: 1;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.c-loading__logo {
+  width: 12.5rem;
+  animation: loading-pulse 1.2s ease-in-out infinite alternate;
+}
+
+.c-loading.is-done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* セッション内2回目以降は表示しない */
+.is-visited .c-loading {
+  display: none;
+}
+
+@keyframes loading-pulse {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

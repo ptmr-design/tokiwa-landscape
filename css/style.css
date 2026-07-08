@@ -19,8 +19,16 @@
 @import url("object/component/_footer-nav.css");
 @import url("object/component/_button.css");
 @import url("object/component/_section-heading.css");
+@import url("object/component/_heading-row.css");
 @import url("object/component/_tel.css");
 @import url("object/component/_contact-banner.css");
+@import url("object/component/_fv.css");
+@import url("object/component/_slider.css");
+@import url("object/component/_service-block.css");
+@import url("object/component/_tag.css");
+@import url("object/component/_news-item.css");
+@import url("object/component/_modal.css");
+@import url("object/component/_loading.css");
 
 /* Object: Utility */
 @import url("object/utility/_spacing.css");

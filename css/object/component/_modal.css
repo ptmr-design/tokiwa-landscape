@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Component: modal (c-modal)
+   お知らせモーダル。<dialog>要素で実装し、長文は内部スクロール(仕様書指定)
+   ========================================================================== */
+
+.c-modal {
+  width: min(100% - var(--space-md) * 2, 53.75rem); /* 860px */
+  max-height: 85vh;
+  padding: 0;
+  margin: auto;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border: none;
+}
+
+/* ::backdropは祖先からCSS変数を継承しないブラウザがあるため直値で指定する */
+.c-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.c-modal__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: flex-start;
+  max-height: 85vh;
+  padding: var(--space-lg) var(--space-md);
+  overflow-y: auto;
+}
+
+.c-modal__meta {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.c-modal__date {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.c-modal__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+.c-modal__image {
+  align-self: center;
+  width: 41rem; /* 656px */
+  max-width: 100%;
+}
+
+.c-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: var(--fs-md);
+}
+
+.c-modal__body ul {
+  padding-left: 1.5em;
+  list-style: disc;
+}
+
+.c-modal__inner > .c-button {
+  align-self: center;
+  margin-top: var(--space-sm);
+}
+
+/* 閉じる(×)ボタン: オーバーレイ右上 */
+.c-modal__close {
+  position: fixed;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: 2rem;
+  height: 2rem;
+  transition: opacity var(--transition-base);
+}
+
+.c-modal__close:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 1024px) {
+  .c-modal__inner {
+    padding: var(--space-2xl) 6.5rem;
+  }
+
+  .c-modal__title {
+    font-size: var(--fs-xl);
+  }
+}

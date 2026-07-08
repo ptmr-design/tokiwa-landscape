@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Component: slider (c-slider)
+   グレー背景内の無限自動スライダー(仕様書指定)。
+   トラック内に同じ画像セットを2周分並べ、CSSアニメーションで-50%まで流す
+   ========================================================================== */
+
+.c-slider {
+  position: relative;
+  padding: var(--space-lg) 0;
+  overflow: hidden;
+  background-color: var(--color-bg-gray);
+}
+
+.c-slider__track {
+  display: flex;
+  gap: var(--space-md);
+  width: max-content;
+  animation: slider-loop 30s linear infinite;
+}
+
+.c-slider__item {
+  width: 12.5rem; /* 200px */
+  height: 12.5rem;
+}
+
+.c-slider__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* 縦書きコピー */
+.c-slider__copy {
+  position: absolute;
+  top: 50%;
+  right: var(--space-md);
+  padding: var(--space-sm) var(--space-xs);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  background-color: var(--color-white);
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 1024px) {
+  .c-slider {
+    padding: var(--space-xl) 0;
+  }
+
+  .c-slider__track {
+    gap: var(--space-xl);
+  }
+
+  .c-slider__item {
+    width: 22.5rem; /* 360px */
+    height: 22.5rem;
+  }
+
+  .c-slider__copy {
+    right: 3.75rem;
+    font-size: var(--fs-xl);
+  }
+}
+
+@keyframes slider-loop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
