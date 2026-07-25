@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Component: skip-link (c-skip-link)
+   キーボード操作時に長いナビゲーションを飛ばして本文へ移動するリンク。
+   通常時は画面外に隠し、フォーカス時のみ表示する
+   ========================================================================== */
+
+.c-skip-link {
+  position: fixed;
+  top: var(--space-xs);
+  left: var(--space-xs);
+  z-index: calc(var(--z-sidebar) + 1); /* サイドバー(ヘッダー)より前面 */
+  padding: var(--space-xs) var(--space-sm);
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
+}
+
+.c-skip-link:focus-visible {
+  transform: translateY(0);
+}

@@ -18,7 +18,13 @@
 
 .c-loading__logo {
   width: 12.5rem;
-  animation: loading-pulse 1.2s ease-in-out infinite alternate;
+}
+
+/* ロゴの明滅はモーション低減設定時は無効 */
+@media (prefers-reduced-motion: no-preference) {
+  .c-loading__logo {
+    animation: loading-pulse 1.2s ease-in-out infinite alternate;
+  }
 }
 
 .c-loading.is-done {

@@ -15,6 +15,7 @@
 @import url("layout/_section.css");
 
 /* Object: Component */
+@import url("object/component/_skip-link.css");
 @import url("object/component/_global-nav.css");
 @import url("object/component/_footer-nav.css");
 @import url("object/component/_button.css");

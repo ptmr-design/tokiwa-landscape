@@ -3,8 +3,11 @@
    要素セレクタへの土台スタイル(クラスへの装飾はLayout/Object層で行う)
    ========================================================================== */
 
-html {
-  scroll-behavior: smooth;
+/* モーション低減設定時はスムーススクロールを無効化する */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

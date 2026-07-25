@@ -69,15 +69,17 @@ const initToggleMenu = () => {
   const nav = document.querySelector(".js-global-nav");
   if (!button || !nav) return;
 
-  const close = () => {
+  const isOpen = () => button.getAttribute("aria-expanded") === "true";
+
+  const close = ({ returnFocus = false } = {}) => {
     button.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
     document.body.style.overflow = "";
+    if (returnFocus) button.focus();
   };
 
   button.addEventListener("click", () => {
-    const isOpen = button.getAttribute("aria-expanded") === "true";
-    if (isOpen) {
+    if (isOpen()) {
       close();
     } else {
       button.setAttribute("aria-expanded", "true");
@@ -90,6 +92,31 @@ const initToggleMenu = () => {
   nav.addEventListener("click", (event) => {
     if (event.target.closest("a")) {
       close();
+    }
+  });
+
+  // 全画面ナビ表示中のキーボード操作: Escで閉じ、Tabフォーカスをメニュー内に閉じ込める
+  document.addEventListener("keydown", (event) => {
+    if (!isOpen()) return;
+
+    if (event.key === "Escape") {
+      close({ returnFocus: true });
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    // 開閉ボタン(先頭)とナビ内リンクの間でループさせる
+    const focusables = [button, ...nav.querySelectorAll("a")];
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
     }
   });
 };

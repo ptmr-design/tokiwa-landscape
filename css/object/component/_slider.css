@@ -15,7 +15,13 @@
   display: flex;
   gap: var(--space-md);
   width: max-content;
-  animation: slider-loop 30s linear infinite;
+}
+
+/* 自動ループはモーション低減設定時は動かさない(WCAG 2.2.2) */
+@media (prefers-reduced-motion: no-preference) {
+  .c-slider__track {
+    animation: slider-loop 30s linear infinite;
+  }
 }
 
 .c-slider__item {

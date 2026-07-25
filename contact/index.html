@@ -21,6 +21,7 @@
     <script src="../js/main.js" defer></script>
   </head>
   <body>
+    <a class="c-skip-link" href="#main">本文へスキップ</a>
     <header class="l-sidebar">
       <p class="l-sidebar__logo">
         <a href="../">
@@ -71,7 +72,7 @@
       </nav>
     </header>
 
-    <main class="l-main">
+    <main class="l-main" id="main" tabindex="-1">
       <div class="c-page-header">
         <div class="l-container">
           <img
@@ -144,8 +145,8 @@
                   </div>
                 </fieldset>
 
-                <div class="c-form__field">
-                  <p class="c-form__label">お名前<span class="c-form__required">★必須</span></p>
+                <fieldset class="c-form__field">
+                  <legend class="c-form__label">お名前<span class="c-form__required">★必須</span></legend>
                   <div class="c-form__name-row">
                     <input
                       class="c-form__input"
@@ -166,7 +167,7 @@
                       required
                     />
                   </div>
-                </div>
+                </fieldset>
 
                 <div class="c-form__field">
                   <label class="c-form__label" for="form-email">
