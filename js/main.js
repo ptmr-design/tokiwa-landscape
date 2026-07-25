@@ -137,6 +137,7 @@ const initForm = () => {
 
   form.addEventListener("input", updateSubmitState);
   form.addEventListener("change", updateSubmitState);
+  // disabledはHTMLに書かずここで初期付与する(JS無効環境でフォームが送信不能になるのを防ぐ)
   updateSubmitState();
 
   form.addEventListener("submit", (event) => {
