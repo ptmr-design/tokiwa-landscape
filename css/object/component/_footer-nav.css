@@ -20,7 +20,8 @@
   transition: color var(--transition-base);
 }
 
-.c-footer-nav__link:hover {
+.c-footer-nav__link:hover,
+.c-footer-nav__link[aria-current="page"] {
   color: var(--color-primary);
 }
 

@@ -132,7 +132,9 @@
   }
 
   .c-global-nav__parent:hover,
-  .c-global-nav__link:hover {
+  .c-global-nav__link:hover,
+  .c-global-nav__parent[aria-current="page"],
+  .c-global-nav__link[aria-current="page"] {
     color: var(--color-primary);
   }
 

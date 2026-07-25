@@ -6,10 +6,10 @@
 
 :root {
   /* --- color --- */
-  --color-primary: #4282b8;
-  --color-primary-pale: #b1c6dc;
+  --color-primary: #33604a;
+  --color-primary-pale: #8fa89a;
   --color-bg-gray: #f8f8f8;
-  --color-text: #000;
+  --color-text: #22301f;
   --color-white: #fff;
   --color-required: #e60012; /* フォーム必須バッジ */
   --color-border: #ccc; /* 区切り線 */

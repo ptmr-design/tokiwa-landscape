@@ -14,7 +14,7 @@ const initLoading = () => {
 
   const done = () => {
     loading.classList.add("is-done");
-    sessionStorage.setItem("aobotan-visited", "true");
+    sessionStorage.setItem("tokiwagi-visited", "true");
   };
 
   if (document.documentElement.classList.contains("is-visited")) return;

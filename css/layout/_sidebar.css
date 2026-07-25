@@ -26,12 +26,14 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 3.6875rem; /* 59px */
   height: 3.6875rem;
   background-color: var(--color-primary);
+  transform: translateZ(0); /* 一部ブラウザでfixed祖先内のボタン背景が描画されない事象への対策 */
 }
 
 .l-sidebar__menu-icon {
