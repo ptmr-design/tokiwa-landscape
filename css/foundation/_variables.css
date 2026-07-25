@@ -13,7 +13,6 @@
   --color-white: #fff;
   --color-required: #e60012; /* フォーム必須バッジ */
   --color-border: #ccc; /* 区切り線 */
-  --color-overlay: rgba(0, 0, 0, 0.5); /* モーダル背景 */
 
   /* --- font family --- */
   --font-base: "Zen Kaku Gothic New", sans-serif;
@@ -27,7 +26,6 @@
   --fs-lg: 1.25rem; /* 20px */
   --fs-xl: 1.5rem; /* 24px */
   --fs-2xl: 2rem; /* 32px */
-  --fs-3xl: 2.5rem; /* 40px */
   --fs-4xl: 4rem; /* 64px */
   /* 装飾英字見出し(SPで縮小) */
   --fs-display: clamp(3.5rem, 10vw, 8rem); /* 〜128px */
@@ -39,7 +37,6 @@
 
   /* --- letter spacing --- */
   --ls-base: 0.05em;
-  --ls-wide: 0.1em;
 
   /* --- spacing (8pxスケール) --- */
   --space-2xs: 0.25rem; /* 4px */
@@ -66,6 +63,5 @@
   /* --- misc --- */
   --transition-base: 0.3s ease;
   --z-sidebar: 100;
-  --z-modal: 200;
   --z-loading: 300;
 }

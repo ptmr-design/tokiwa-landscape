@@ -3,14 +3,6 @@
    1クラス1役割。複数のCSSプロパティを持たせない
    ========================================================================== */
 
-.u-mt-sm {
-  margin-top: var(--space-sm);
-}
-
-.u-mt-md {
-  margin-top: var(--space-md);
-}
-
 .u-mt-lg {
   margin-top: var(--space-lg);
 }
