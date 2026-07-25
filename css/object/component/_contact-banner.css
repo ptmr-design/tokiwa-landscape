@@ -24,6 +24,7 @@
   right: var(--space-md);
   bottom: var(--space-md);
   width: 3.75rem;
+  pointer-events: none; /* メールボタンと重なる範囲でクリックを奪わないようにする */
 }
 
 @media (min-width: 1024px) {

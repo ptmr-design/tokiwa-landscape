@@ -13,9 +13,48 @@
   border: none;
 }
 
+/* 開閉フェード(ふわっと表示。allow-discreteでdisplay/overlayもトランジション対象にする) */
+@media (prefers-reduced-motion: no-preference) {
+  .c-modal {
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.98);
+    transition: opacity 0.3s ease, transform 0.3s ease, overlay 0.3s ease allow-discrete,
+      display 0.3s ease allow-discrete;
+  }
+
+  .c-modal[open] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  @starting-style {
+    .c-modal[open] {
+      opacity: 0;
+      transform: translateY(0.75rem) scale(0.98);
+    }
+  }
+}
+
 /* ::backdropは祖先からCSS変数を継承しないブラウザがあるため直値で指定する */
 .c-modal::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .c-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease, overlay 0.3s ease allow-discrete, display 0.3s ease allow-discrete;
+  }
+
+  .c-modal[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @starting-style {
+    .c-modal[open]::backdrop {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
 }
 
 .c-modal__inner {

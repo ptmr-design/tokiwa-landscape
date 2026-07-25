@@ -24,6 +24,17 @@
   visibility: visible;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .c-global-nav {
+    transform: translateY(-0.75rem);
+    transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
+  }
+
+  .c-global-nav.is-open {
+    transform: translateY(0);
+  }
+}
+
 .c-global-nav__list {
   display: flex;
   flex-direction: column;
@@ -67,6 +78,7 @@
     margin-top: 3.5rem;
     opacity: 1;
     visibility: visible;
+    transform: none;
     transition: none;
   }
 
