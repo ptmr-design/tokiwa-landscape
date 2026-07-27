@@ -95,6 +95,11 @@
     font-weight: 700;
     color: var(--color-primary);
   }
+
+  .c-fv__scroll:hover,
+  .c-fv__scroll:focus-visible {
+    text-decoration: underline;
+  }
 }
 
 /* ふわっと出現アニメーション(モーション低減設定時は無効) */

@@ -16,7 +16,7 @@
   background-color: var(--color-white);
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition-base), visibility var(--transition-base);
+  transition: opacity var(--transition-slow), visibility var(--transition-slow);
 }
 
 .c-global-nav.is-open {
@@ -27,7 +27,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .c-global-nav {
     transform: translateY(-0.75rem);
-    transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
+    transition: opacity var(--transition-slow), visibility var(--transition-slow), transform var(--transition-slow);
   }
 
   .c-global-nav.is-open {
@@ -123,7 +123,8 @@
     margin-top: 0;
     overflow: hidden;
     visibility: hidden;
-    transition: max-height var(--transition-base), visibility var(--transition-base);
+    text-align: left; /* SP用の.c-global-nav__list { text-align: center }を打ち消す */
+    transition: max-height var(--transition-slow), visibility var(--transition-slow);
   }
 
   .c-global-nav__group--has-sub:hover .c-global-nav__sub,

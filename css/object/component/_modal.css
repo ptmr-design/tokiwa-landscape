@@ -103,23 +103,82 @@
   list-style: disc;
 }
 
-.c-modal__inner > .c-button {
-  align-self: center;
-  margin-top: var(--space-sm);
-}
-
-/* 閉じる(×)ボタン: オーバーレイ右上 */
+/* 閉じるボタン: 横長の枠線ボタン + 右側の丸い×アイコン */
 .c-modal__close {
-  position: fixed;
-  top: var(--space-lg);
-  right: var(--space-lg);
-  width: 2rem;
-  height: 2rem;
-  transition: opacity var(--transition-base);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.25rem; /* 180px */
+  min-height: 3rem; /* 48px */
+  margin-top: var(--space-sm);
+  margin-inline: auto;
+  padding: 0.625rem 3rem 0.625rem 1.5rem; /* 右は丸アイコン分の逃げ */
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  transition: color var(--transition-slow), background-color var(--transition-slow);
 }
 
-.c-modal__close:hover {
-  opacity: 0.6;
+/* 右端の丸地 */
+.c-modal__close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: background-color var(--transition-slow), transform var(--transition-slow);
+}
+
+/* ×印(2本の斜線をグラデーションで描画) */
+.c-modal__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1.1875rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background:
+    linear-gradient(45deg, transparent 46%, var(--color-white) 46%, var(--color-white) 54%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, var(--color-white) 46%, var(--color-white) 54%, transparent 54%);
+  transform: translateY(-50%);
+}
+
+@media (hover: hover) {
+  .c-modal__close:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  .c-modal__close:hover::before {
+    background-color: var(--color-white);
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .c-modal__close:hover::after {
+    background:
+      linear-gradient(45deg, transparent 46%, var(--color-primary) 46%, var(--color-primary) 54%, transparent 54%),
+      linear-gradient(-45deg, transparent 46%, var(--color-primary) 46%, var(--color-primary) 54%, transparent 54%);
+  }
+}
+
+.c-modal__close:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-modal__close,
+  .c-modal__close::before {
+    transition: none;
+  }
 }
 
 @media (min-width: 1024px) {

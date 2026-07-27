@@ -102,12 +102,12 @@
                 常盤木造園は、作庭から手入れまで庭に寄り添う造園のプロフェッショナルです。
               </p>
             </div>
-            <p class="c-fv__scroll">scroll down</p>
+            <a class="c-fv__scroll" href="#intro">scroll down</a>
           </div>
         </div>
       </div>
 
-      <div class="c-slider u-mt-2xl">
+      <div class="c-slider u-mt-2xl" id="intro">
         <ul class="c-slider__track">
           <li class="c-slider__item">
             <img class="c-slider__image" src="./assets/img/slide01.webp" alt="緑あふれる庭園で作業する職人" width="720" height="720" loading="lazy" />
@@ -346,9 +346,6 @@
     </footer>
 
     <dialog class="c-modal js-modal" id="news-modal-1" aria-labelledby="news-modal-1-title">
-      <button class="c-modal__close js-modal-close" type="button" aria-label="閉じる">
-        <img src="./assets/svg/icon-close.svg" alt="" width="32" height="32" />
-      </button>
       <div class="c-modal__inner">
         <p class="c-modal__meta">
           <span class="c-tag">イベント情報</span>
@@ -379,14 +376,13 @@
             弊社の造園士が、皆様のご要望にお応えし、一緒に理想の庭づくりを実現するお手伝いをさせていただきます。ぜひお越しください！
           </p>
         </div>
-        <button class="c-button js-modal-close" type="button">閉じる</button>
+        <button class="c-modal__close js-modal-close" type="button">
+          <span>閉じる</span>
+        </button>
       </div>
     </dialog>
 
     <dialog class="c-modal js-modal" id="news-modal-2" aria-labelledby="news-modal-2-title">
-      <button class="c-modal__close js-modal-close" type="button" aria-label="閉じる">
-        <img src="./assets/svg/icon-close.svg" alt="" width="32" height="32" />
-      </button>
       <div class="c-modal__inner">
         <p class="c-modal__meta">
           <span class="c-tag">イベント情報</span>
@@ -411,14 +407,13 @@
             樹木の安全点検研修を通じて、従業員一人ひとりが安全に対する意識を高め、安全な作業環境の実現に向けて一層の努力をすることを確認しました。今後も定期的に研修を実施し、安全管理の徹底を図ってまいります。
           </p>
         </div>
-        <button class="c-button js-modal-close" type="button">閉じる</button>
+        <button class="c-modal__close js-modal-close" type="button">
+          <span>閉じる</span>
+        </button>
       </div>
     </dialog>
 
     <dialog class="c-modal js-modal" id="news-modal-3" aria-labelledby="news-modal-3-title">
-      <button class="c-modal__close js-modal-close" type="button" aria-label="閉じる">
-        <img src="./assets/svg/icon-close.svg" alt="" width="32" height="32" />
-      </button>
       <div class="c-modal__inner">
         <p class="c-modal__meta">
           <span class="c-tag">更新情報</span>
@@ -444,7 +439,9 @@
             ぜひ、新しいホームページをご覧いただき、お客様のご意見やご要望をお聞かせください。今後もお客様により良いサービスを提供できるよう努めてまいります。
           </p>
         </div>
-        <button class="c-button js-modal-close" type="button">閉じる</button>
+        <button class="c-modal__close js-modal-close" type="button">
+          <span>閉じる</span>
+        </button>
       </div>
     </dialog>
   </body>
