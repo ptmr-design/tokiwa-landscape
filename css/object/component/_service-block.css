@@ -59,7 +59,7 @@
   font-size: var(--fs-md);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-service-block {
     flex-direction: row;
     gap: var(--space-xl);

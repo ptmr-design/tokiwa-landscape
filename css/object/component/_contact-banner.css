@@ -27,7 +27,7 @@
   pointer-events: none; /* メールボタンと重なる範囲でクリックを奪わないようにする */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-contact-banner {
     padding: var(--space-2xl) var(--space-xl);
   }

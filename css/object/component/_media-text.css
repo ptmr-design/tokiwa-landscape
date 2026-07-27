@@ -36,7 +36,7 @@
   color: var(--color-primary);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-media-text {
     flex-direction: row;
     gap: var(--space-2xl);

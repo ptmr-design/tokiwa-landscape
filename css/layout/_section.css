@@ -12,7 +12,7 @@
   scroll-margin-top: var(--height-header-sp); /* SP固定ヘッダー分のアンカーずれ防止 */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .l-section {
     padding-top: var(--space-4xl);
   }
@@ -23,7 +23,7 @@
   margin-inline: auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .l-main {
     padding-top: 0;
     margin-left: var(--width-sidebar);

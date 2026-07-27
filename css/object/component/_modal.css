@@ -181,7 +181,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-modal__inner {
     padding: var(--space-2xl) 6.5rem;
   }

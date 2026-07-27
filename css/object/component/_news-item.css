@@ -53,7 +53,7 @@
   height: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-news-item__button {
     padding: var(--space-lg) var(--space-sm);
   }

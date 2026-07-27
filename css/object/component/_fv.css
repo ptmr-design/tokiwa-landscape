@@ -8,7 +8,7 @@
   position: relative;
 }
 
-/* 右上の青い正方形(PCのみ) */
+/* 右上の緑の縦長長方形(PCのみ。写真の背面から覗く) */
 .c-fv::before {
   content: "";
   position: absolute;
@@ -16,7 +16,7 @@
   right: 0;
   display: none;
   width: 45.4375rem; /* 727px */
-  height: 45.4375rem;
+  height: 80%;
   background-color: var(--color-primary);
 }
 
@@ -38,6 +38,7 @@
   font-size: var(--fs-2xl);
   font-weight: 700;
   line-height: var(--lh-tight);
+  letter-spacing: normal;
 }
 
 .c-fv__lead {
@@ -50,9 +51,9 @@
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-fv {
-    padding: 2.5rem 2.5rem 0 0; /* 40px: グレーパネルの右上に青を覗かせる */
+    padding: 2.5rem 2.5rem 0 0; /* 40px: 写真の右上に緑を覗かせる */
   }
 
   .c-fv::before {
@@ -67,14 +68,15 @@
     border-radius: var(--radius-xl);
   }
 
-  /* コピーはパネル右下に白面で重ねる */
+  /* コピーは写真右下の内側に白面で浮かせる */
   .c-fv__copy {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    max-width: 43.125rem; /* 690px */
-    padding: var(--space-lg) 0 var(--space-lg) var(--space-xl);
-    border-top-left-radius: var(--radius-xl);
+    right: var(--space-xl);
+    bottom: var(--space-xl);
+    width: min(47rem, calc(100% - var(--space-xl) * 2));
+    max-width: 47rem;
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-lg);
   }
 
   .c-fv__title {

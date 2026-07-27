@@ -32,7 +32,7 @@
   margin-top: var(--space-2xl);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-service-detail__photo {
     width: 60rem; /* 960px */
   }

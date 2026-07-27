@@ -23,7 +23,7 @@
   white-space: nowrap;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-info-table th {
     width: 15.125rem; /* 242px */
   }

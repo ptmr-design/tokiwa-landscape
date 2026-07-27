@@ -11,12 +11,14 @@
 }
 
 .c-heading-row__illust {
-  flex-shrink: 0;
+  flex-shrink: 1; /* SPでは見出し幅に応じて縮小を許可(横スクロール防止) */
   width: 5rem;
+  min-width: 3rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1260px) {
   .c-heading-row__illust {
+    flex-shrink: 0;
     width: 10rem;
   }
 }
