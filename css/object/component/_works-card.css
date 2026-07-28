@@ -9,10 +9,21 @@
   line-height: var(--lh-tight);
 }
 
+/* 初期実装時のjirei01〜06.jpgはすべて704:548で統一されていたが、
+   現在のwebpファイルは事例ごとに比率が異なるため、比率を固定して左右を揃える */
 .c-works-card__image {
   width: 100%;
+  aspect-ratio: 704 / 548;
+  object-fit: cover;
+  object-position: center;
   margin-top: var(--space-sm);
   border-radius: var(--radius-md);
+}
+
+/* jirei05.webp(神戸市立真島小学校)は左端に国旗が写り込むため、
+   画像ファイルは変更せずobject-positionのみ右寄せにして国旗を目立たなくする */
+.c-works-card__image--focus-right {
+  object-position: right center;
 }
 
 .c-works-card__caption {

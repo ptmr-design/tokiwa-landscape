@@ -1,13 +1,13 @@
 /* ==========================================================================
    Component: page-header (c-page-header)
-   下層ページ共通: ヒーロー画像 + h1 + リード + イラスト + アンカーボタン
+   下層ページ共通: ヒーロー画像 + h1 + リード + アンカーボタン
    ========================================================================== */
 
 .c-page-header {
   position: relative;
 }
 
-/* 右上の青いアクセント(PCのみ) */
+/* 右上のアクセント(PCのみ) */
 .c-page-header::before {
   content: "";
   position: absolute;
@@ -19,10 +19,14 @@
   background-color: var(--color-primary);
 }
 
+/* 実ファイルの比率がページごとに異なるため、PC表示で約1120×660(初期実装の指定比率)に揃える */
 .c-page-header__hero {
   position: relative;
   z-index: 1;
   width: 100%;
+  aspect-ratio: 1120 / 660;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-lg);
 }
 
@@ -44,6 +48,10 @@
 }
 
 @media (min-width: 1260px) {
+  .c-page-header {
+    padding-top: 2.5rem; /* 画像が上端に詰まらないよう余白を確保(c-fvと同仕様) */
+  }
+
   .c-page-header::before {
     display: block;
   }

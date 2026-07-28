@@ -3,8 +3,13 @@
    事業内容ページの各事業セクション(大判写真+見出し+2カラム説明+施工事例)
    ========================================================================== */
 
+/* 初期実装時のworks01〜03.jpg(1920:800)は横長バナー比率だったが、
+   現在のwebpファイルは比率が異なり縦に大きく表示されるため、比率を固定してobject-fitで補う */
 .c-service-detail__photo {
   width: 100%;
+  aspect-ratio: 1920 / 800;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-md);
 }
 
