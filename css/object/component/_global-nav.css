@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Component: global-nav (c-global-nav)
+   SP: ハンバーガーから開く全画面オーバーレイナビ
+   PC(1260px〜): サイドバー内ナビ。親項目ホバーで子メニュー開閉(デフォルト閉+アイコン)
+   ========================================================================== */
+
+/* --- SP: 全画面オーバーレイ --- */
+.c-global-nav {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* l-sidebar(ヘッダーバー)より背面に敷く */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: calc(var(--height-header-sp) + var(--space-lg)) var(--space-md) var(--space-md);
+  background-color: var(--color-white);
+  visibility: hidden;
+}
+
+.c-global-nav.is-open {
+  visibility: visible;
+}
+
+.c-global-nav__toggle { display: none; }
+.c-global-nav__panel { display: contents; }
+
+@media (max-width: 1259px) {
+  .c-global-nav {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    overflow-anchor: none;
+  }
+
+  .c-global-nav > .c-global-nav__list {
+    flex-shrink: 0;
+    overflow-y: visible;
+  }
+
+  .c-global-nav__group { position: relative; width: 100%; }
+  .c-global-nav__group--has-sub > .c-global-nav__parent { padding-inline: 3rem; min-height: 2.75rem; }
+  .c-global-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: var(--color-primary);
+  }
+  .c-global-nav__toggle::before,
+  .c-global-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 0.4375rem);
+    width: 0.875rem;
+    height: 2px;
+    background: currentColor;
+  }
+  .c-global-nav__toggle::after {
+    transform: rotate(90deg) scaleX(1);
+    transition: transform var(--transition-nav);
+  }
+
+  .c-global-nav__toggle[aria-expanded="true"]::after {
+    transform: rotate(90deg) scaleX(0);
+  }
+
+  .c-global-nav__panel {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-nav);
+  }
+  .c-global-nav__panel > .c-global-nav__sub { margin-top: 0; }
+  .c-global-nav__sub > li:first-child { padding-top: var(--space-md); }
+  .c-global-nav__toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-global-nav, .c-global-nav__panel, .c-global-nav__toggle::after { transition: none; }
+}
+
+.c-global-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.c-global-nav__parent,
+.c-global-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  line-height: var(--lh-tight);
+}
+
+.c-global-nav__sub {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+.c-global-nav__copyright {
+  margin-top: var(--space-xl);
+  font-size: var(--fs-xs);
+  text-align: center;
+}
+
+/* --- PC: サイドバー内アコーディオン --- */
+@media (min-width: 1260px) {
+  .c-global-nav {
+    position: static;
+    z-index: auto;
+    display: block;
+    padding: 0;
+    margin-top: 3.5rem;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .c-global-nav__list {
+    display: block;
+    overflow-y: visible;
+  }
+
+  .c-global-nav__group {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .c-global-nav__parent {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 1.25rem 0;
+    font-size: var(--fs-lg);
+    transition: color var(--transition-base);
+  }
+
+  /* 開閉インジケーター(＋/−)。子メニューを持つグループのみ表示 */
+  .c-global-nav__group--has-sub > .c-global-nav__parent::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+
+  .c-global-nav__group--has-sub:hover > .c-global-nav__parent::after,
+  .c-global-nav__group--has-sub:focus-within > .c-global-nav__parent::after {
+    content: "−";
+  }
+
+  /* 子メニュー: デフォルト閉、ホバー/フォーカスで開く */
+  .c-global-nav__sub {
+    display: block;
+    max-height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    visibility: hidden;
+    text-align: left; /* SP用の.c-global-nav__list { text-align: center }を打ち消す */
+    transition: max-height var(--transition-slow), visibility var(--transition-slow);
+  }
+
+  .c-global-nav__group--has-sub:hover .c-global-nav__sub,
+  .c-global-nav__group--has-sub:focus-within .c-global-nav__sub {
+    max-height: 12rem;
+    visibility: visible;
+  }
+
+  .c-global-nav__link {
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+    font-size: var(--fs-sm);
+    transition: color var(--transition-base);
+  }
+
+  .c-global-nav__sub > li:last-child .c-global-nav__link {
+    padding-bottom: 1.25rem;
+  }
+
+  .c-global-nav__parent:hover,
+  .c-global-nav__link:hover,
+  .c-global-nav__parent[aria-current="page"],
+  .c-global-nav__link[aria-current="page"] {
+    color: var(--color-primary);
+  }
+
+  .c-global-nav__copyright {
+    display: none;
+  }
+}

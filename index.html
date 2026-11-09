@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>常盤木造園 | 大阪市北区の庭づくり・剪定・緑地管理</title>
+    <meta
+      name="description"
+      content="大阪府大阪市に拠点をおく常盤木造園は、丁寧な手入れで緑を未来につなぎます。庭づくりから緑地管理まで、高品質なサービスと経験豊富なスタッフがお客様のニーズに応えます。お気軽にご相談ください。"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+      // ローディング画面はセッション内初回のみ表示(仕様書指定)。描画前に再訪判定する
+      if (sessionStorage.getItem("tokiwagi-visited")) {
+        document.documentElement.classList.add("is-visited");
+      }
+    </script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="c-skip-link" href="#main">本文へスキップ</a>
+    <header class="l-sidebar">
+      <p class="l-sidebar__logo">
+        <a href="./index.html">
+          <img src="./assets/svg/logo.svg" alt="常盤木造園" width="200" height="121" />
+        </a>
+      </p>
+      <button
+        class="l-sidebar__menu-button js-toggle-menu u-sp-only"
+        type="button"
+        aria-expanded="false"
+        aria-controls="global-nav"
+        aria-label="メニューを開閉する"
+      >
+        <span class="l-sidebar__menu-icon"></span>
+      </button>
+      <nav class="c-global-nav js-global-nav" id="global-nav" aria-label="サイト内ナビゲーション">
+        <ul class="c-global-nav__list">
+          <li class="c-global-nav__group u-sp-only">
+            <a class="c-global-nav__parent" href="./index.html" aria-current="page">トップページ</a>
+          </li>
+          <li class="c-global-nav__group c-global-nav__group--has-sub">
+            <a class="c-global-nav__parent" href="./about/index.html">私達について</a>
+            <ul class="c-global-nav__sub">
+              <li><a class="c-global-nav__link" href="./about/index.html#philosophy">経営理念</a></li>
+              <li><a class="c-global-nav__link" href="./about/index.html#company">会社概要</a></li>
+              <li><a class="c-global-nav__link" href="./about/index.html#safety">安全への取り組み</a></li>
+            </ul>
+          </li>
+          <li class="c-global-nav__group c-global-nav__group--has-sub">
+            <a class="c-global-nav__parent" href="./service/index.html">事業内容</a>
+            <ul class="c-global-nav__sub">
+              <li><a class="c-global-nav__link" href="./service/index.html#housing">個人邸の作庭・剪定</a></li>
+              <li><a class="c-global-nav__link" href="./service/index.html#corporate">法人・商業施設の緑地管理</a></li>
+              <li><a class="c-global-nav__link" href="./service/index.html#public">公共緑化工事</a></li>
+            </ul>
+          </li>
+          <li class="c-global-nav__group">
+            <a class="c-global-nav__parent" href="./index.html#news">お知らせ</a>
+          </li>
+          <li class="c-global-nav__group">
+            <a class="c-global-nav__parent" href="./contact/index.html">
+              <img src="./assets/svg/icon-mail.svg" alt="" width="24" height="24" />
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <p class="c-global-nav__copyright">© TOKIWAGI ZOEN INC.</p>
+      </nav>
+    </header>
+
+    <div class="c-loading js-loading" aria-hidden="true">
+      <img class="c-loading__logo" src="./assets/svg/logo.svg" alt="" width="200" height="121" />
+    </div>
+
+    <main class="l-main" id="main" tabindex="-1">
+      <div class="c-fv">
+        <div class="l-container">
+          <div class="c-fv__panel">
+            <img
+              class="c-fv__illust"
+              src="./assets/img/first-view.webp"
+              alt="緑豊かに手入れされた庭園の風景"
+              width="1600"
+              height="1060"
+              fetchpriority="high"
+            />
+            <div class="c-fv__copy">
+              <h1 class="c-fv__title">緑を育て、暮らしに。</h1>
+              <p class="c-fv__lead">
+                庭は、完成した日から育ちはじめます。<br />
+                常盤木造園は、作庭から手入れまで庭に寄り添う造園のプロフェッショナルです。
+              </p>
+            </div>
+            <a class="c-fv__scroll" href="#intro">scroll down</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-slider u-mt-2xl" id="intro">
+        <ul class="c-slider__track">
+          <li class="c-slider__item">
+            <img class="c-slider__image" src="./assets/img/slide01.webp" alt="緑あふれる庭園で作業する職人" width="720" height="720" loading="lazy" />
+          </li>
+          <li class="c-slider__item">
+            <img class="c-slider__image" src="./assets/img/slide02.webp" alt="タブレットで庭園プランを確認するスタッフ" width="720" height="720" loading="lazy" />
+          </li>
+          <li class="c-slider__item">
+            <img class="c-slider__image" src="./assets/img/slide03.webp" alt="剪定作業を行う職人" width="720" height="720" loading="lazy" />
+          </li>
+          <li class="c-slider__item" aria-hidden="true">
+            <img class="c-slider__image" src="./assets/img/slide01.webp" alt="" width="720" height="720" loading="lazy" />
+          </li>
+          <li class="c-slider__item" aria-hidden="true">
+            <img class="c-slider__image" src="./assets/img/slide02.webp" alt="" width="720" height="720" loading="lazy" />
+          </li>
+          <li class="c-slider__item" aria-hidden="true">
+            <img class="c-slider__image" src="./assets/img/slide03.webp" alt="" width="720" height="720" loading="lazy" />
+          </li>
+        </ul>
+        <p class="c-slider__copy">丁寧な手入れで<br />緑を未来に</p>
+      </div>
+
+      <section class="l-section">
+        <div class="l-container">
+          <div class="c-heading-row">
+            <h2 class="c-section-heading c-section-heading--lg">
+              <span class="c-section-heading__label">私達について</span>
+              <span class="c-section-heading__en" aria-hidden="true">ABOUT</span>
+            </h2>
+            <img
+              class="c-heading-row__illust"
+              src="./assets/svg/illust-interview.svg"
+              alt=""
+              width="161"
+              height="213"
+              loading="lazy"
+            />
+          </div>
+          <p class="u-max-w-md u-mt-lg">
+            「丁寧な手入れで、緑を未来に」。これは私たちの約束です。常盤木造園が手がける庭は、ただの外構ではありません。それは、四季とともに育ち、お客様の暮らしに寄り添う生きた風景です。
+          </p>
+          <a class="c-button u-mt-lg" href="./about/index.html">Read More</a>
+        </div>
+      </section>
+
+      <section class="l-section">
+        <div class="l-container">
+          <div class="c-heading-row">
+            <h2 class="c-section-heading c-section-heading--lg">
+              <span class="c-section-heading__label">事業内容</span>
+              <span class="c-section-heading__en" aria-hidden="true">SERVICE</span>
+            </h2>
+            <img
+              class="c-heading-row__illust"
+              src="./assets/svg/illust-contract.svg"
+              alt=""
+              width="124"
+              height="172"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="u-mt-2xl">
+            <article class="c-service-block">
+              <div class="c-service-block__media">
+                <img
+                  class="c-service-block__image"
+                  src="./assets/img/house01.webp"
+                  alt="緑豊かな個人邸の庭園"
+                  width="1032"
+                  height="688"
+                  loading="lazy"
+                />
+                <span class="c-service-block__number" aria-hidden="true">01</span>
+              </div>
+              <div class="c-service-block__body">
+                <h3 class="c-service-block__title">個人邸の作庭・剪定</h3>
+                <p class="c-service-block__text">
+                  個人邸では、お客様の暮らしとご要望に合わせて、オーダーメイドの庭をご提案します。私たちは、庭の設計から植栽、完成後の剪定・手入れまで、理想の暮らしを実現するための最適なかたちを探します。
+                </p>
+                <a class="c-button" href="./service/index.html#housing">Read More</a>
+              </div>
+            </article>
+
+            <article class="c-service-block c-service-block--reverse">
+              <div class="c-service-block__media">
+                <img
+                  class="c-service-block__image"
+                  src="./assets/img/house02.webp"
+                  alt="商業施設の緑地"
+                  width="1032"
+                  height="774"
+                  loading="lazy"
+                />
+                <span class="c-service-block__number" aria-hidden="true">02</span>
+              </div>
+              <div class="c-service-block__body">
+                <h3 class="c-service-block__title">法人・商業施設の緑地管理</h3>
+                <p class="c-service-block__text">
+                  法人向けには、商業施設やオフィス、工場緑地など、さまざまなニーズに応じた植栽の管理を手がけています。お客様のビジネスの要件やイメージに合わせて、効率的で継続的な緑地を設計・管理します。
+                </p>
+                <a class="c-button" href="./service/index.html#corporate">Read More</a>
+              </div>
+            </article>
+
+            <article class="c-service-block">
+              <div class="c-service-block__media">
+                <img
+                  class="c-service-block__image"
+                  src="./assets/img/house03.webp"
+                  alt="石造りの公共施設と緑地"
+                  width="1032"
+                  height="590"
+                  loading="lazy"
+                />
+                <span class="c-service-block__number" aria-hidden="true">03</span>
+              </div>
+              <div class="c-service-block__body">
+                <h3 class="c-service-block__title">公共緑化工事</h3>
+                <p class="c-service-block__text">
+                  公共緑化では、公園や街路樹、緑地帯など、地域社会に欠かせない緑の整備・維持を行います。私たちは、公共の福祉と安全を考慮しながら、厳格な規制や基準に適合した施工を行います。
+                </p>
+                <a class="c-button" href="./service/index.html#public">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-section" id="news">
+        <div class="l-container">
+          <h2 class="c-section-heading c-section-heading--lg">
+            <span class="c-section-heading__label">お知らせ</span>
+            <span class="c-section-heading__en" aria-hidden="true">NEWS</span>
+          </h2>
+          <ul class="c-news-list u-mt-xl">
+            <li class="c-news-item">
+              <button class="c-news-item__button js-modal-open" type="button" data-modal="news-modal-1">
+                <span class="c-tag">イベント情報</span>
+                <time class="c-news-item__date" datetime="2026-06-01">2026.06.01</time>
+                <span class="c-news-item__title">
+                  お庭の無料相談会を実施します。剪定や庭づくりのお悩み、お気軽にご相談ください。
+                </span>
+                <img class="c-news-item__arrow" src="./assets/svg/icon-arrow-right.svg" alt="" width="16" height="16" />
+              </button>
+            </li>
+            <li class="c-news-item">
+              <button class="c-news-item__button js-modal-open" type="button" data-modal="news-modal-2">
+                <span class="c-tag">イベント情報</span>
+                <time class="c-news-item__date" datetime="2026-05-23">2026.05.23</time>
+                <span class="c-news-item__title">樹木の安全点検研修を実施しました！</span>
+                <img class="c-news-item__arrow" src="./assets/svg/icon-arrow-right.svg" alt="" width="16" height="16" />
+              </button>
+            </li>
+            <li class="c-news-item">
+              <button class="c-news-item__button js-modal-open" type="button" data-modal="news-modal-3">
+                <span class="c-tag">更新情報</span>
+                <time class="c-news-item__date" datetime="2026-05-01">2026.05.01</time>
+                <span class="c-news-item__title">ホームページをリニューアルしました！！</span>
+                <img class="c-news-item__arrow" src="./assets/svg/icon-arrow-right.svg" alt="" width="16" height="16" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="l-container u-mt-3xl">
+        <section class="c-contact-banner">
+          <h2 class="c-section-heading">
+            <span class="c-section-heading__label">お問い合わせ</span>
+            <span class="c-section-heading__en" aria-hidden="true">CONTACT</span>
+          </h2>
+          <div class="c-contact-banner__body">
+            <div class="c-tel">
+              <div class="c-tel__item">
+                <span class="c-tel__label">Tel</span>
+                <span class="c-tel__note">お電話</span>
+              </div>
+              <div class="c-tel__item">
+                <a class="c-tel__number" href="tel:0000000000">0000-000-0000</a>
+                <span class="c-tel__note">営業時間9:00-18:00</span>
+              </div>
+            </div>
+            <a class="c-button c-button--mail" href="./contact/index.html">
+              <img class="c-button__icon" src="./assets/svg/icon-mail.svg" alt="" width="20" height="20" />
+              メールフォームはこちら
+            </a>
+          </div>
+          <img
+            class="c-contact-banner__illust"
+            src="./assets/svg/illust-financing.svg"
+            alt=""
+            width="175"
+            height="256"
+            loading="lazy"
+          />
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-footer__inner l-container">
+        <p class="l-footer__logo">
+          <a href="./index.html">
+            <img src="./assets/svg/logo.svg" alt="常盤木造園" width="222" height="133" />
+          </a>
+        </p>
+        <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+          <ul class="c-footer-nav">
+            <li><a class="c-footer-nav__link" href="./index.html" aria-current="page">トップページ</a></li>
+            <li><a class="c-footer-nav__link" href="./about/index.html">私たちについて</a></li>
+            <li><a class="c-footer-nav__link" href="./about/index.html#philosophy">経営理念</a></li>
+            <li><a class="c-footer-nav__link" href="./about/index.html#company">会社概要</a></li>
+            <li><a class="c-footer-nav__link" href="./about/index.html#safety">安全への取り組み</a></li>
+            <li><a class="c-footer-nav__link" href="./service/index.html">事業内容</a></li>
+            <li><a class="c-footer-nav__link" href="./service/index.html#housing">個人邸の作庭・剪定</a></li>
+            <li><a class="c-footer-nav__link" href="./service/index.html#corporate">法人・商業施設の緑地管理</a></li>
+            <li><a class="c-footer-nav__link" href="./service/index.html#public">公共緑化工事</a></li>
+            <li><a class="c-footer-nav__link" href="./index.html#news">お知らせ</a></li>
+            <li>
+              <a class="c-footer-nav__link" href="./contact/index.html">
+                <img src="./assets/svg/icon-mail.svg" alt="" width="20" height="20" />
+                お問い合わせ
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="l-footer__info">
+          <p>〒000-0000　大阪府大阪市北区南町5-6-7</p>
+          <p>営業時間　9:00-18:00</p>
+          <p>定休日　日曜日、祝日、年末年始（12月31日から1月3日まで）</p>
+        </address>
+        <p class="l-footer__copyright"><small>© TOKIWAGI ZOEN INC.</small></p>
+      </div>
+    </footer>
+
+    <dialog class="c-modal js-modal" id="news-modal-1" aria-labelledby="news-modal-1-title">
+      <div class="c-modal__inner">
+        <p class="c-modal__meta">
+          <span class="c-tag">イベント情報</span>
+          <time class="c-modal__date" datetime="2026-06-01">2026.06.01</time>
+        </p>
+        <h2 class="c-modal__title" id="news-modal-1-title">
+          お庭の無料相談会を実施します。剪定や庭づくりのお悩み、お気軽にご相談ください。
+        </h2>
+        <img class="c-modal__image" src="./assets/img/jirei01.webp" alt="緑豊かな庭園の風景" width="1312" height="984" loading="lazy" />
+        <div class="c-modal__body">
+          <p>
+            みなさま、こんにちは！弊社では、お庭の無料相談会を開催することになりました！剪定や庭づくりのお悩みをお持ちの皆様、ぜひご参加ください。
+          </p>
+          <p>
+            庭づくりは、暮らしを彩る大切な取り組みです。そのためには、木々の生理や土地の気候を読んだ、慎重な計画と適切なアドバイスが欠かせません。そこで、弊社の造園士が皆様のお悩みやご要望をお聞きし、最適な庭づくりの提案をさせていただきます。
+          </p>
+          <p>お庭の無料相談会では、以下のようなことについてご相談いただけます：</p>
+          <ul>
+            <li>理想の庭のデザインについて</li>
+            <li>剪定や手入れの頻度・費用について</li>
+            <li>植栽や庭木選びについてのアドバイス</li>
+            <li>省管理で長く楽しめる庭づくりについて</li>
+          </ul>
+          <p>
+            また、相談会に参加いただいた方には、特別なサービスやプレゼントもご用意しています。庭づくりに関するご質問や疑問点がある方は、ぜひこの機会にお気軽にご参加ください。
+          </p>
+          <p>
+            弊社の造園士が、皆様のご要望にお応えし、一緒に理想の庭づくりを実現するお手伝いをさせていただきます。ぜひお越しください！
+          </p>
+        </div>
+        <button class="c-modal__close js-modal-close" type="button">
+          <span>閉じる</span>
+        </button>
+      </div>
+    </dialog>
+
+    <dialog class="c-modal js-modal" id="news-modal-2" aria-labelledby="news-modal-2-title">
+      <div class="c-modal__inner">
+        <p class="c-modal__meta">
+          <span class="c-tag">イベント情報</span>
+          <time class="c-modal__date" datetime="2026-05-23">2026.05.23</time>
+        </p>
+        <h2 class="c-modal__title" id="news-modal-2-title">樹木の安全点検研修を実施しました！</h2>
+        <img class="c-modal__image" src="./assets/img/safety01.webp" alt="研修で樹木の点検方法を学ぶ従業員" width="1312" height="1025" loading="lazy" />
+        <div class="c-modal__body">
+          <p>
+            弊社では、従業員の安全意識向上と安全管理の強化を目的として、樹木の安全点検研修を実施しました。この研修では、従業員全員が高木剪定や伐採を安全に行うための重要性や具体的な対策について学び、より安全な作業体制づくりに向けた取り組みを行いました。
+          </p>
+          <p>研修では、以下の内容を中心に学びました：</p>
+          <ul>
+            <li>高所作業・伐採時の事故や災害を防ぐための基本的な安全ルールや手順</li>
+            <li>安全装置や保護具の正しい使用方法と管理について</li>
+            <li>作業現場での危険予知や事故対応のためのトレーニング</li>
+          </ul>
+          <p>
+            また、実際の事例やケーススタディを通じて、事故や災害が発生した際の適切な対応方法についても学びました。参加者全員が積極的に議論し、知識を深めることができました。
+          </p>
+          <p>
+            樹木の安全点検研修を通じて、従業員一人ひとりが安全に対する意識を高め、安全な作業環境の実現に向けて一層の努力をすることを確認しました。今後も定期的に研修を実施し、安全管理の徹底を図ってまいります。
+          </p>
+        </div>
+        <button class="c-modal__close js-modal-close" type="button">
+          <span>閉じる</span>
+        </button>
+      </div>
+    </dialog>
+
+    <dialog class="c-modal js-modal" id="news-modal-3" aria-labelledby="news-modal-3-title">
+      <div class="c-modal__inner">
+        <p class="c-modal__meta">
+          <span class="c-tag">更新情報</span>
+          <time class="c-modal__date" datetime="2026-05-01">2026.05.01</time>
+        </p>
+        <h2 class="c-modal__title" id="news-modal-3-title">ホームページをリニューアルしました！！</h2>
+        <img class="c-modal__image c-modal__image--announcement" src="./assets/img/news03.webp" alt="花々と手入れされた植栽が広がる庭園" width="1190" height="744" loading="lazy" />
+        <div class="c-modal__body">
+          <p>
+            弊社は、お客様により良いサービスを提供するため、ホームページをリニューアルいたしました。新しいデザインと使いやすさを追求し、お客様が情報をより簡単に見つけられるように工夫しました。
+          </p>
+          <p>新しいホームページでは、以下のような改善点がございます：</p>
+          <ul>
+            <li>モダンでスタイリッシュなデザインにより、情報の見やすさと視覚的な魅力を向上</li>
+            <li>より直感的で分かりやすいナビゲーションメニューにより、目的の情報へのアクセスがスムーズになりました</li>
+            <li>より多くの情報やサービスを掲載し、お客様のニーズに合った情報を提供するようになりました</li>
+            <li>モバイルフレンドリーなデザインで、スマートフォンやタブレットからも快適に閲覧できます</li>
+          </ul>
+          <p>
+            弊社のホームページは、お客様とのコミュニケーションや情報提供の重要なツールです。より使いやすく、わかりやすいホームページを提供することで、お客様との良好な関係を築いていくことが目標です。
+          </p>
+          <p>
+            ぜひ、新しいホームページをご覧いただき、お客様のご意見やご要望をお聞かせください。今後もお客様により良いサービスを提供できるよう努めてまいります。
+          </p>
+        </div>
+        <button class="c-modal__close js-modal-close" type="button">
+          <span>閉じる</span>
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>

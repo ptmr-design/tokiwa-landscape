@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Foundation: base
+   要素セレクタへの土台スタイル(クラスへの装飾はLayout/Object層で行う)
+   ========================================================================== */
+
+/* モーション低減設定時はスムーススクロールを無効化する */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* スクロールロック中も通常時のスクロールバー領域を保持する。 */
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-md);
+  line-height: var(--lh-base);
+  letter-spacing: var(--ls-base);
+  color: var(--color-text);
+  background-color: var(--color-white);
+}

@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Claude Code ローカル設定(個人環境情報を含むため追跡しない)
+.claude/settings.local.json

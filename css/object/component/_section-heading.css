@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Component: section-heading (c-section-heading)
+   日本語小ラベル + 大型白抜き英字(Kanit / text-stroke)
+   --lg: TOPセクション用の特大サイズ(168px相当)
+   ========================================================================== */
+
+.c-section-heading {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--lh-tight);
+}
+
+.c-section-heading__label {
+  font-weight: 700;
+  font-size: var(--fs-xl);
+}
+
+.c-section-heading__en {
+  margin-left: -0.05em; /* 白抜き英字の左端を視覚的に揃える */
+  font-family: var(--font-en);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-primary-pale);
+}
+
+.c-section-heading--lg .c-section-heading__en {
+  font-size: var(--fs-display-lg);
+}

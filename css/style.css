@@ -1,0 +1,44 @@
+/* ==========================================================================
+   style.css
+   軽量FLOCSS: Foundation → Layout → Object(Component → Utility) の順で読み込む
+   Componentファイルは実装時に追加する
+   ========================================================================== */
+
+/* Foundation */
+@import url("foundation/_reset.css");
+@import url("foundation/_variables.css");
+@import url("foundation/_base.css");
+
+/* Layout */
+@import url("layout/_sidebar.css");
+@import url("layout/_footer.css");
+@import url("layout/_section.css");
+
+/* Object: Component */
+@import url("object/component/_skip-link.css");
+@import url("object/component/_global-nav.css");
+@import url("object/component/_footer-nav.css");
+@import url("object/component/_button.css");
+@import url("object/component/_section-heading.css");
+@import url("object/component/_heading-row.css");
+@import url("object/component/_tel.css");
+@import url("object/component/_contact-banner.css");
+@import url("object/component/_fv.css");
+@import url("object/component/_slider.css");
+@import url("object/component/_service-block.css");
+@import url("object/component/_tag.css");
+@import url("object/component/_news-item.css");
+@import url("object/component/_modal.css");
+@import url("object/component/_loading.css");
+@import url("object/component/_page-header.css");
+@import url("object/component/_anchor-button.css");
+@import url("object/component/_media-text.css");
+@import url("object/component/_info-table.css");
+@import url("object/component/_service-detail.css");
+@import url("object/component/_works-card.css");
+@import url("object/component/_step.css");
+@import url("object/component/_form.css");
+
+/* Object: Utility */
+@import url("object/utility/_spacing.css");
+@import url("object/utility/_display.css");

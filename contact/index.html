@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>お問い合わせ | 常盤木造園</title>
+    <meta
+      name="description"
+      content="常盤木造園へのお問い合わせはこちらから。庭づくり・剪定、法人・緑地管理、公共緑化のご相談を、フォームまたはお電話で受け付けています。"
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="c-skip-link" href="#main">本文へスキップ</a>
+    <header class="l-sidebar">
+      <p class="l-sidebar__logo">
+        <a href="../index.html">
+          <img src="../assets/svg/logo.svg" alt="常盤木造園" width="200" height="121" />
+        </a>
+      </p>
+      <button
+        class="l-sidebar__menu-button js-toggle-menu u-sp-only"
+        type="button"
+        aria-expanded="false"
+        aria-controls="global-nav"
+        aria-label="メニューを開閉する"
+      >
+        <span class="l-sidebar__menu-icon"></span>
+      </button>
+      <nav class="c-global-nav js-global-nav" id="global-nav" aria-label="サイト内ナビゲーション">
+        <ul class="c-global-nav__list">
+          <li class="c-global-nav__group u-sp-only">
+            <a class="c-global-nav__parent" href="../index.html">トップページ</a>
+          </li>
+          <li class="c-global-nav__group c-global-nav__group--has-sub">
+            <a class="c-global-nav__parent" href="../about/index.html">私達について</a>
+            <ul class="c-global-nav__sub">
+              <li><a class="c-global-nav__link" href="../about/index.html#philosophy">経営理念</a></li>
+              <li><a class="c-global-nav__link" href="../about/index.html#company">会社概要</a></li>
+              <li><a class="c-global-nav__link" href="../about/index.html#safety">安全への取り組み</a></li>
+            </ul>
+          </li>
+          <li class="c-global-nav__group c-global-nav__group--has-sub">
+            <a class="c-global-nav__parent" href="../service/index.html">事業内容</a>
+            <ul class="c-global-nav__sub">
+              <li><a class="c-global-nav__link" href="../service/index.html#housing">個人邸の作庭・剪定</a></li>
+              <li><a class="c-global-nav__link" href="../service/index.html#corporate">法人・商業施設の緑地管理</a></li>
+              <li><a class="c-global-nav__link" href="../service/index.html#public">公共緑化工事</a></li>
+            </ul>
+          </li>
+          <li class="c-global-nav__group">
+            <a class="c-global-nav__parent" href="../index.html#news">お知らせ</a>
+          </li>
+          <li class="c-global-nav__group">
+            <a class="c-global-nav__parent" href="../contact/index.html" aria-current="page">
+              <img src="../assets/svg/icon-mail.svg" alt="" width="24" height="24" />
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <p class="c-global-nav__copyright">© TOKIWAGI ZOEN INC.</p>
+      </nav>
+    </header>
+
+    <main class="l-main" id="main" tabindex="-1">
+      <div class="c-page-header">
+        <div class="l-container">
+          <img
+            class="c-page-header__hero"
+            src="../assets/img/contact-hero.webp"
+            alt="芝生の上に置かれた剪定用の電動工具"
+            width="1600"
+            height="1067"
+            fetchpriority="high"
+          />
+          <div class="u-mt-lg">
+            <h1 class="c-page-header__title">お問い合わせ</h1>
+            <p class="c-page-header__lead u-max-w-md">
+              常盤木造園のサービスにご興味を持って頂き、誠にありがとうございます。下記のフォームよりお問い合わせください。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="l-section">
+        <div class="l-container">
+          <div class="c-contact-layout">
+            <div class="c-contact-layout__main">
+              <ol class="c-step">
+                <li class="c-step__item c-step__item--current">
+                  <span class="c-step__number">01</span>
+                  <span class="c-step__label">入力</span>
+                </li>
+                <li class="c-step__item">
+                  <span class="c-step__number">02</span>
+                  <span class="c-step__label">送信完了</span>
+                </li>
+              </ol>
+
+              <form class="c-form js-form u-mt-xl" action="../thanks/index.html" method="get">
+                <fieldset class="c-form__field">
+                  <legend class="c-form__label">
+                    お問い合わせの種類<span class="c-form__required">★必須</span>
+                  </legend>
+                  <div class="c-form__radios">
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="庭づくり・作庭の相談" checked required />
+                      庭づくり・作庭の相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="剪定・手入れの相談" />
+                      剪定・手入れの相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="法人・緑地管理の相談" />
+                      法人・緑地管理の相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="公共緑化の相談" />
+                      公共緑化の相談
+                    </label>
+                    <label class="c-form__radio">
+                      <input type="radio" name="inquiry-type" value="その他" />
+                      その他
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="c-form__field">
+                  <legend class="c-form__label">お名前<span class="c-form__required">★必須</span></legend>
+                  <div class="c-form__name-row">
+                    <input
+                      class="c-form__input"
+                      type="text"
+                      name="family-name"
+                      placeholder="常盤"
+                      autocomplete="family-name"
+                      aria-label="姓"
+                      required
+                    />
+                    <input
+                      class="c-form__input"
+                      type="text"
+                      name="given-name"
+                      placeholder="幸太郎"
+                      autocomplete="given-name"
+                      aria-label="名"
+                      required
+                    />
+                  </div>
+                </fieldset>
+
+                <div class="c-form__field">
+                  <label class="c-form__label" for="form-email">
+                    メールアドレス<span class="c-form__required">★必須</span>
+                  </label>
+                  <input
+                    class="c-form__input"
+                    id="form-email"
+                    type="email"
+                    name="email"
+                    placeholder="tokiwagi@gmail.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="c-form__field">
+                  <label class="c-form__label" for="form-tel">電話番号</label>
+                  <input
+                    class="c-form__input"
+                    id="form-tel"
+                    type="tel"
+                    name="tel"
+                    placeholder="000-0000-0000"
+                    autocomplete="tel"
+                  />
+                </div>
+
+                <div class="c-form__field">
+                  <label class="c-form__label" for="form-address">
+                    住所<span class="c-form__required">★必須</span>
+                  </label>
+                  <input
+                    class="c-form__input"
+                    id="form-address"
+                    type="text"
+                    name="address"
+                    placeholder="大阪府大阪市北区南町5-6-7"
+                    autocomplete="street-address"
+                    required
+                  />
+                </div>
+
+                <label class="c-form__confirm">
+                  <input type="checkbox" name="confirm" required />
+                  入力内容に間違いないことを確認しました
+                </label>
+
+                <p class="c-form__submit">
+                  <button class="c-button c-button--primary js-form-submit" type="submit">
+                    送信する
+                  </button>
+                </p>
+              </form>
+            </div>
+
+            <div class="c-form-aside">
+              <p class="c-form-aside__title">お電話も受け付けています。</p>
+              <a class="c-form-aside__number" href="tel:0000000000">0000-000-0000</a>
+              <p class="c-form-aside__note">営業時間9:00-18:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="l-container u-mt-3xl">
+        <section class="c-contact-banner">
+          <h2 class="c-section-heading">
+            <span class="c-section-heading__label">お問い合わせ</span>
+            <span class="c-section-heading__en" aria-hidden="true">CONTACT</span>
+          </h2>
+          <div class="c-contact-banner__body">
+            <div class="c-tel">
+              <div class="c-tel__item">
+                <span class="c-tel__label">Tel</span>
+                <span class="c-tel__note">お電話</span>
+              </div>
+              <div class="c-tel__item">
+                <a class="c-tel__number" href="tel:0000000000">0000-000-0000</a>
+                <span class="c-tel__note">営業時間9:00-18:00</span>
+              </div>
+            </div>
+            <a class="c-button c-button--mail" href="../contact/index.html">
+              <img class="c-button__icon" src="../assets/svg/icon-mail.svg" alt="" width="20" height="20" />
+              メールフォームはこちら
+            </a>
+          </div>
+          <img
+            class="c-contact-banner__illust"
+            src="../assets/svg/illust-financing.svg"
+            alt=""
+            width="175"
+            height="256"
+            loading="lazy"
+          />
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-footer__inner l-container">
+        <p class="l-footer__logo">
+          <a href="../index.html">
+            <img src="../assets/svg/logo.svg" alt="常盤木造園" width="222" height="133" />
+          </a>
+        </p>
+        <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+          <ul class="c-footer-nav">
+            <li><a class="c-footer-nav__link" href="../index.html">トップページ</a></li>
+            <li><a class="c-footer-nav__link" href="../about/index.html">私たちについて</a></li>
+            <li><a class="c-footer-nav__link" href="../about/index.html#philosophy">経営理念</a></li>
+            <li><a class="c-footer-nav__link" href="../about/index.html#company">会社概要</a></li>
+            <li><a class="c-footer-nav__link" href="../about/index.html#safety">安全への取り組み</a></li>
+            <li><a class="c-footer-nav__link" href="../service/index.html">事業内容</a></li>
+            <li><a class="c-footer-nav__link" href="../service/index.html#housing">個人邸の作庭・剪定</a></li>
+            <li><a class="c-footer-nav__link" href="../service/index.html#corporate">法人・商業施設の緑地管理</a></li>
+            <li><a class="c-footer-nav__link" href="../service/index.html#public">公共緑化工事</a></li>
+            <li><a class="c-footer-nav__link" href="../index.html#news">お知らせ</a></li>
+            <li>
+              <a class="c-footer-nav__link" href="../contact/index.html" aria-current="page">
+                <img src="../assets/svg/icon-mail.svg" alt="" width="20" height="20" />
+                お問い合わせ
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="l-footer__info">
+          <p>〒000-0000　大阪府大阪市北区南町5-6-7</p>
+          <p>営業時間　9:00-18:00</p>
+          <p>定休日　日曜日、祝日、年末年始（12月31日から1月3日まで）</p>
+        </address>
+        <p class="l-footer__copyright"><small>© TOKIWAGI ZOEN INC.</small></p>
+      </div>
+    </footer>
+  </body>
+</html>

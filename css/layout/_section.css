@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Layout: section (l-main / l-container)
+   メインコンテンツの大枠。PCはサイドバー分オフセット、コンテンツ幅1120px
+   ========================================================================== */
+
+.l-main {
+  padding-top: var(--height-header-sp);
+}
+
+.l-section {
+  padding-top: var(--space-2xl);
+  scroll-margin-top: var(--height-header-sp); /* SP固定ヘッダー分のアンカーずれ防止 */
+}
+
+@media (min-width: 1260px) {
+  .l-section {
+    padding-top: var(--space-4xl);
+  }
+}
+
+.l-container {
+  width: min(100% - var(--space-md) * 2, var(--width-content));
+  margin-inline: auto;
+}
+
+@media (min-width: 1260px) {
+  .l-main {
+    padding-top: 0;
+    margin-left: var(--width-sidebar);
+  }
+
+  .l-container {
+    width: min(100% - var(--space-lg) * 2, var(--width-content));
+  }
+}
